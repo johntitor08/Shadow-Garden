@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - zemin
+  - karakter
+  - ates
+  - enemy
+  - elma
+  - kalp
+  - renklizemin
+  - ziplatanzemin
+  - border
+  - shadowFloor
+  - portal
+  - bigEnemy
+  - bubble
+  - characterBullet
+  - enemyBullet
+  - water
+  - superEnemy
+  - jumperEnemy
+  - shield
+  - weakPoint
+  - fallenFloor
+  - upperFloor
+  - lava
+  - moveCamera
+  - rotatingFloor
+  - sword
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Star
+  - Water
+  - UI
+  - Minimap
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: En Arka Katman
+    uniqueID: 3276907963
+    locked: 0
+  - name: Arka Katman
+    uniqueID: 4271173163
+    locked: 0
+  - name: Orta Katman
+    uniqueID: 3066623457
+    locked: 0
+  - name: "\xD6n Katman"
+    uniqueID: 4281554331
+    locked: 0
+  - name: "En \xD6n Katman"
+    uniqueID: 3648148363
+    locked: 0

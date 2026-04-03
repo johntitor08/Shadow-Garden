@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Story_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 3a6c4c5806ff6a74cb6a1c32770eac9f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12989173760
+    m_Localized: Once upon a time there lived a ninja in these lands. Her biggest
+      dream was to become an avatar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1756857953095680
+    m_Localized: His master told him about the Dragon Ball. The person who obtained
+      the Dragon Ball would master the 4 elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757440957157376
+    m_Localized: His master told him, "The only way to become an Avatar is to have
+      the Dragon Ball."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757444224520192
+    m_Localized: This ninja decided to find the Dragon Ball and went on an adventure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758137907875840
+    m_Localized: Select Your Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758624371642368
+    m_Localized: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758796203888640
+    m_Localized: Skip Scene -->
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758790742904832
+    m_Localized: To be continued...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758789832740864
+    m_Localized: Skip Story -->
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

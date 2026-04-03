@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!251 &585215690
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374217315220540710}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!1001 &5953306535628349893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1612740869939354667, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723246447649811683, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_Name
+      value: turuncu zemin (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723246447649811683, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_TagString
+      value: rotatingFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 938.36554
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.316923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.929958
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055644766433721397, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+--- !u!1 &1374217315220540710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4723246447649811683, guid: a318cdb0e3375714b80aab6ced2b2761, type: 3}
+  m_PrefabInstance: {fileID: 5953306535628349893}
+  m_PrefabAsset: {fileID: 0}

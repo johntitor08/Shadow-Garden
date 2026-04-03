@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9b475d7f3508c5a43bfc5e5eac61611e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sitka Small
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6b305af62d5688f4baef71c1cf46a980, type: 3}
+  - {fileID: 12800000, guid: d0aacfdddfe5853458b0ab1a1bfad672, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

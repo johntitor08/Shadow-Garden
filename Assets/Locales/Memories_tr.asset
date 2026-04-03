@@ -1,0 +1,860 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Memories_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 711d309e098fdac4ab241f8f29590fc2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2688831135879217
+    m_Localized: "Evet! Onu tan\u0131yor musun?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879216
+    m_Localized: "Bir b\xFCy\xFCc\xFC i\xE7in tuzak kurdum, ne yaz\u0131k ki onun
+      yerine siz geldiniz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879215
+    m_Localized: Onu buraya kasten koydum.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879214
+    m_Localized: "Bu arada, Dragonspine'\u0131 alamazs\u0131n\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879213
+    m_Localized: Buraya Avalon'dan geldim.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879212
+    m_Localized: "Sakin olun. Ben Tesla, bilim adam\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879211
+    m_Localized: Selam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879210
+    m_Localized: Ne?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879209
+    m_Localized: "Onunla maceram\u0131zda tan\u0131\u015Ft\u0131k."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879208
+    m_Localized: "B\xFCy\xFCc\xFC, Emin'i mi kastediyorsun?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879207
+    m_Localized: Ne oldu demin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879206
+    m_Localized: Noluyo lan!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879205
+    m_Localized: Evet, bence de.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879204
+    m_Localized: Tamam, hadi gidelim!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879203
+    m_Localized: "E\u011Fer bu objeyi getirirsem, sevgilimi kurtaraca\u011F\u0131n\u0131
+      s\xF6yledi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879202
+    m_Localized: "Sevgilimi kurtarmam laz\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879201
+    m_Localized: "San\u0131r\u0131m..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879200
+    m_Localized: Neden?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879199
+    m_Localized: Sen kimsin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879198
+    m_Localized: Ne!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879197
+    m_Localized: "San\u0131r\u0131m onu bulduk!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879196
+    m_Localized: "O, Arcadia'n\u0131n prensesi. Onunla evlenece\u011Fim!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879195
+    m_Localized: "Onu yabanc\u0131lardan korumal\u0131y\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879194
+    m_Localized: "San\u0131r\u0131m..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879193
+    m_Localized: "Getirdiniz mi? Anlad\u0131m..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879192
+    m_Localized: "Evet, Kral\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879191
+    m_Localized: "Kral\u0131m, onu getirdik."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879190
+    m_Localized: "Evet, Kral\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879189
+    m_Localized: "Lordum! San\u0131yoruz ki erkek arkada\u015F\u0131 onu kurtarmaya
+      gelecek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879188
+    m_Localized: "Deste\u011Fin i\xE7in te\u015Fekk\xFCrler :)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879187
+    m_Localized: "Peki \xF6yleyse, hadi Dragonspine'\u0131 bulal\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879186
+    m_Localized: Onu nerede bulabiliriz?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879185
+    m_Localized: Sorun yok =)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879184
+    m_Localized: "Xalangwo da\u011F\u0131nda bulabilirsiniz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879183
+    m_Localized: "B\xF6ylece, b\xFCy\xFCl\xFC k\xFCremi kullanabilece\u011Fim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879182
+    m_Localized: "Arkada\u015F\u0131n\u0131z\u0131 kurtarmak istiyorsan\u0131z, bana
+      Dragonspine'\u0131 getirin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879181
+    m_Localized: "Merak etme dostum! Sevgilini kurtaraca\u011F\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879180
+    m_Localized: Evet, hadi gidelim!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879179
+    m_Localized: Ben de seni seviyorum <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879178
+    m_Localized: Seni seviyorum sevgilim <3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879177
+    m_Localized: "G\xF6rece\u011Fiz xD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879176
+    m_Localized: "Merak etme, onu \xF6ld\xFCrece\u011Fiz. Kral seni kendisi i\xE7in
+      istiyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879175
+    m_Localized: "\"Beyhude, kimseye g\xFCvenemezsin.\" dedi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879174
+    m_Localized: "Kral\u0131m\u0131z seni g\xFCvende tutmam\u0131z\u0131 s\xF6yledi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879173
+    m_Localized: Maltoroz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879172
+    m_Localized: "O beni kurtarmaya gelecek, hi\xE7bir \u015Fey yapamazs\u0131n\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879171
+    m_Localized: "Ahmettny ile evlenece\u011Fim, buna engel olamazs\u0131n\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879170
+    m_Localized: "O benim sevgilim! Bizi rahat b\u0131rakmas\u0131n\u0131 s\xF6yle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879169
+    m_Localized: Benden ne istiyorsunuz?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879168
+    m_Localized: Sen kimsin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073505
+    m_Localized: Neden birlikte olmuyoruz =)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073504
+    m_Localized: "Ne g\xFCzel bir g\xFCn."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073503
+    m_Localized: "Umar\u0131m, onlar i\xE7in elimden geleni yapaca\u011F\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073502
+    m_Localized: "Ahmettny'nin nerede oldu\u011Funu merak ediyorum..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073501
+    m_Localized: "Sonu\xE7ta o me\u015Fgul."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073500
+    m_Localized: Evet...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073499
+    m_Localized: "O kim, Erina m\u0131?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073498
+    m_Localized: "\u0130lgin\xE7 bir \u015Fey bulursan\u0131z, benim i\xE7in al\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073497
+    m_Localized: "Ah, evet. Ama bir iste\u011Fim var."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073496
+    m_Localized: O benim ustam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073495
+    m_Localized: Evet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073494
+    m_Localized: "Bilimsel ara\u015Ft\u0131rmam i\xE7in ondan \xF6d\xFCn\xE7 ald\u0131m
+      ve bana izin verdi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073493
+    m_Localized: Her neyse, bu nesnenin zaten bir sahibi var.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073492
+    m_Localized: "Ama Emin i\xE7in bunun bir \xF6nemi yok, o sadece kendini d\xFC\u015F\xFCn\xFCyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073491
+    m_Localized: "Bu \u015Fekilde do\u011Fan\u0131n dengesini bozar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073490
+    m_Localized: "Ancak enerjisi kullan\u0131ld\u0131k\xE7a \xE7evredeki enerjiyi
+      emer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073489
+    m_Localized: "Dragonspine g\xFC\xE7l\xFC bir enerji kayna\u011F\u0131d\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073488
+    m_Localized: "Yani \xE7almak i\xE7in onlar\u0131 g\xF6nderdin!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073487
+    m_Localized: "Seni yakalad\u0131m, sinsi B\xFCy\xFCc\xFC!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073486
+    m_Localized: Selam Emin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073485
+    m_Localized: "Te\u015Fekk\xFCr ederim!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073484
+    m_Localized: "Oras\u0131 neresi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073483
+    m_Localized: "Oh, anl\u0131yorum..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073482
+    m_Localized: Erina kim?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073481
+    m_Localized: "Ama iyi haber, Dragonspine'\u0131 bulduk!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073480
+    m_Localized: Selam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073479
+    m_Localized: Hadi gidelim!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073478
+    m_Localized: "Parl\u0131yor!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073477
+    m_Localized: Tabi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073476
+    m_Localized: Sorun ne?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073475
+    m_Localized: Gelmek istedi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073474
+    m_Localized: Selam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073473
+    m_Localized: "Bu haritay\u0131 takip et."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073472
+    m_Localized: O, Avalon'un kalesinde.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879233
+    m_Localized: "Tamam, arkada\u015F\u0131n nerede bir kontrol edelim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879232
+    m_Localized: "Yani, onlara Dragonspine'\u0131 \xF6d\xFCn\xE7 verecek misin?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879231
+    m_Localized: "Ayn\u0131 zamanda \xE7ok \xFCnl\xFC bir ki\u015Fidir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879230
+    m_Localized: "Ne!? Bunun tamamen fark\u0131nday\u0131m. Gereksiz kullan\u0131mdan
+      ka\xE7\u0131n\u0131rd\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879229
+    m_Localized: "Hey, onlar arkada\u015Flar\u0131n\u0131 kurtarmak istiyor!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879228
+    m_Localized: Aman aman...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879227
+    m_Localized: Neden onu getirdiniz??
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879226
+    m_Localized: NEEEE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879225
+    m_Localized: Ne?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879224
+    m_Localized: "Evet, onu yenece\u011Fim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879223
+    m_Localized: "Hey, Authory'nin nerede oldu\u011Funu biliyor musun?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879222
+    m_Localized: Evet, benimle gel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879221
+    m_Localized: Authory, Kral?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879220
+    m_Localized: "\xD6yleyse ona birlikte gidelim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879219
+    m_Localized: "Ohh, anl\u0131yorum..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879218
+    m_Localized: "Ne maceras\u0131?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073555
+    m_Localized: "\xD6yleyse gidiyor musunuz?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073554
+    m_Localized: "Uzun zamand\u0131r hi\xE7 arkada\u015F\u0131m olmad\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073553
+    m_Localized: "Evet, ben insanlardan uzak ya\u015F\u0131yorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073552
+    m_Localized: "Wow, ne g\xFCzel bir harita!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073551
+    m_Localized: "Wow, bakay\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073550
+    m_Localized: Elindeki ne?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073549
+    m_Localized: "Buras\u0131 benim bah\xE7em."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073548
+    m_Localized: "Hey, ben Frisk. Burada ya\u015F\u0131yorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073547
+    m_Localized: "Wow, te\u015Fekk\xFCr ederim!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073546
+    m_Localized: "Birini kurtarmam\u0131z gerek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073545
+    m_Localized: "Wow, bu nas\u0131l bir yer?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073544
+    m_Localized: "\xD6yleyse gidelim :)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073543
+    m_Localized: "Ger\xE7ekten mi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073542
+    m_Localized: Evet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073541
+    m_Localized: "Bu senin ilk harita g\xF6r\xFC\u015F\xFCn m\xFC?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073540
+    m_Localized: "Oh, bu k\u0131tan\u0131n haritas\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073539
+    m_Localized: Hey, sen kimsin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073538
+    m_Localized: NE?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073537
+    m_Localized: Tabi, Bay Tesla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073536
+    m_Localized: Acele etmeliyiz!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073535
+    m_Localized: "Arkada\u015F olduklar\u0131n\u0131 s\xF6yleyen yabanc\u0131lardan
+      duydum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073534
+    m_Localized: Buyur, Emin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073533
+    m_Localized: "Prenses ka\xE7\u0131r\u0131ld\u0131!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073532
+    m_Localized: "B\xFCy\xFCk bir problemimiz var!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073531
+    m_Localized: "Beni oraya g\xF6t\xFCr!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073530
+    m_Localized: "Kaleye ge\xE7ebilir miyim?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073529
+    m_Localized: Tabi ki yendim, haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073528
+    m_Localized: Elveda.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073527
+    m_Localized: "Sonunda uyand\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073526
+    m_Localized: "Lanet olsun, ona vuram\u0131yorum!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073525
+    m_Localized: "Muhte\u015Fem d\xF6v\xFC\u015F sanat\u0131m\u0131!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073524
+    m_Localized: "Dalga m\u0131 ge\xE7iyorsun? Sadece izle!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073523
+    m_Localized: "D\xFCnyay\u0131 korku ile y\xF6netece\u011Fim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073522
+    m_Localized: "Ben mutlak k\xF6t\xFCy\xFCm!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073521
+    m_Localized: "Buna hepinizi \xF6ld\xFCrerek ba\u015Fl\u0131yorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073520
+    m_Localized: "Dinle evlat. Ben bu d\xFCnyan\u0131n ba\u015F\u0131na gelecek olan
+      felaketim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073519
+    m_Localized: "Uzak dur, k\u0131z. Onu ala\u015Fa\u011F\u0131 edece\u011Fim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073518
+    m_Localized: "Hahaha. Ben m\xFCkemmel canavar Garou."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073517
+    m_Localized: Onu yendin!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073516
+    m_Localized: AMAN TANRIM!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073515
+    m_Localized: "Garou, sana g\xFCveniyorum..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073514
+    m_Localized: T-tamam...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073513
+    m_Localized: Ne??
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073512
+    m_Localized: Sorun nedir?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073511
+    m_Localized: "\xD6yleyse senin canavarc\u0131l\u0131k oyunun burada sona eriyor
+      xD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073510
+    m_Localized: Sen kimsin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073509
+    m_Localized: "Kral ve \u015E\xF6valye."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073508
+    m_Localized: "Umar\u0131m bir anla\u015Fmaya var\u0131rlar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073507
+    m_Localized: "Elinden geleni yap\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073506
+    m_Localized: "Ke\u015Fke Kral da gelseydi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267825
+    m_Localized: "Im sama, Erina hakk\u0131nda ne s\xF6yleyebilirsin?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267824
+    m_Localized: "Ger\xE7ekten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267823
+    m_Localized: "Hakl\u0131s\u0131n, hepsi benim yarat\u0131klar\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267822
+    m_Localized: "Tanr\u0131 olmak \xE7ok s\u0131k\u0131c\u0131, insanlar\u0131 izlemek
+      e\u011Flenceli."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267821
+    m_Localized: "S\xF6ylersem e\u011Flenceni bozar, izlemeni \xF6neririm."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267820
+    m_Localized: "Bu benim \xF6d\xFCl\xFCm."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267819
+    m_Localized: "Dragon Ball'u bulan ki\u015Fi bir sonraki tanr\u0131 aday\u0131
+      olacak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267818
+    m_Localized: "\u015Eaka yap\u0131yorum, ben zaten \xF6l\xFCms\xFCz\xFCm."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267817
+    m_Localized: "Dragon Ball benim olacak ve \xF6l\xFCms\xFCz olaca\u011F\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267816
+    m_Localized: "O bir sihirli kemik kullan\u0131c\u0131s\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267815
+    m_Localized: "Hay\u0131r, onun kendini yenileme yetene\u011Fi var."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267814
+    m_Localized: "O bu hikayedeki en \xF6nemli ki\u015Fi olacak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267813
+    m_Localized: "Asgard Kalesine bir g\xF6z atal\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267812
+    m_Localized: "Ama Maltoroz hakk\u0131nda hi\xE7bir fikrim yok."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267811
+    m_Localized: "Evet, Erina'n\u0131n nerede oldu\u011Funu biliyorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267810
+    m_Localized: Ee, n'oluyor?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267809
+    m_Localized: "Te\u015Fekk\xFCr ederim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267808
+    m_Localized: "\u0130\u015Fte buraday\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267807
+    m_Localized: "Anlad\u0131m!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267806
+    m_Localized: "Yak\u0131nda buraya gelecek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267805
+    m_Localized: "Hi\xE7 ipucun var m\u0131?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267804
+    m_Localized: Bilmem.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267803
+    m_Localized: Hey, Prenses Erina sama nerede?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267802
+    m_Localized: "Maltoroz ve Erina'y\u0131 bulmal\u0131y\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267801
+    m_Localized: "Ho\u015Fgeldin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267800
+    m_Localized: "Daha de\u011Fil. Emin bir B\xFCy\xFCc\xFC, ona soraca\u011F\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267799
+    m_Localized: "O benimleydi, \u015Fimdi onu bulam\u0131yorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267798
+    m_Localized: Peki Maltoroz?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267797
+    m_Localized: Bir fikrim yok.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267796
+    m_Localized: "Tekrar g\xF6r\xFC\u015F\xFCr\xFCz, Authory."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267795
+    m_Localized: "Lavinia, seni biriyle tan\u0131\u015Ft\u0131raca\u011F\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267794
+    m_Localized: Evet, ben de onu bulmak istiyorum.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267793
+    m_Localized: "Sana yard\u0131m edebilirim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267792
+    m_Localized: Ben Erina.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267791
+    m_Localized: "Ho\u015F\xE7akal."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267790
+    m_Localized: "Ninja Nevoksa ve \u015E\xF6valye Ahmettny."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267789
+    m_Localized: "Benim de onlar\u0131 durdurmam gerek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267788
+    m_Localized: Lavinia kim?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267787
+    m_Localized: "Peki \u015Fimdi ne yapacaks\u0131n, Garou?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267786
+    m_Localized: "Sana bol \u015Fans!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267785
+    m_Localized: Bizimle gel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267784
+    m_Localized: "Wow, ger\xE7ekten mi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267783
+    m_Localized: "O daha \xF6nce yapt\u0131\u011F\u0131m bir hologram insan."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267782
+    m_Localized: "Dragon Ball'u bulaca\u011F\u0131m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267781
+    m_Localized: "Oh, yani sen \u015Fu herkesin bahsetti\u011Fi G\xF6lge Samuray's\u0131n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267780
+    m_Localized: Sen kimsin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267779
+    m_Localized: "Anlad\u0131m, Erina sama."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267778
+    m_Localized: "Ben ne yapaca\u011F\u0131m?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267777
+    m_Localized: "Evet, ben g\xFC\xE7l\xFCy\xFCm."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267776
+    m_Localized: "Oh, size yard\u0131m edebilirim isterseniz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267831
+    m_Localized: "Hepsinin insan oldu\u011Funa emin miyiz?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267830
+    m_Localized: "Ama Garou'da da b\xFCy\xFCk bir potansiyel g\xF6r\xFCyorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267829
+    m_Localized: "G\xFC\xE7l\xFC sava\u015F\xE7\u0131, Ahmettny. Bahsimi ona yat\u0131r\u0131yorum."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267828
+    m_Localized: "Bakal\u0131m bu oyunu kim kazanacak :)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267827
+    m_Localized: "Bu evreni sadece e\u011Flenmek i\xE7in yaratt\u0131n\u0131z."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267826
+    m_Localized: "Maltoroz \xF6ld\xFC m\xFC?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

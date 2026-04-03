@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MainMenu_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: db2ccd0f4533b2c4cbe86911ca6ce653, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 474412945408
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468603834368
+    m_Localized: Seviyeler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476388462592
+    m_Localized: "\xC7\u0131k\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477877440512
+    m_Localized: "E\u011Fitim"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 624824881152
+    m_Localized: "Hedef:\nT\xFCm Y\u0131ld\u0131zlar\u0131 Topla!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 678042210304
+    m_Localized: "Kontroller:\nZ\u0131plama : bo\u015Fluk ya da yukar\u0131 tu\u015Fu\nHareket
+      : a,s,d,w ya da y\xF6n tu\u015Flar\u0131\nMen\xFC: ESC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 699496075264
+    m_Localized: "F tu\u015Funa bas ve d\xFC\u015Fmanlara ate\u015F et!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 726557724672
+    m_Localized: "T\u0131rmanmaya \xE7al\u0131\u015F\u0131n. Oyunun devam\u0131 i\xE7in
+      bunu bilmeniz gerekiyor.\nBu kombinasyonlar\u0131 h\u0131zl\u0131ca deneyin:\nz\u0131pla
+      - duvara tutun - duvardan \xE7ekil ve tekrar z\u0131pla - tekrar et"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12790336643862528
+    m_Localized: "<- Men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12790872491364352
+    m_Localized: "T\xFCm Seviyeler"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791410427629568
+    m_Localized: Seviye 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791430698700800
+    m_Localized: Seviye 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791432414171136
+    m_Localized: Seviye 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791434259664896
+    m_Localized: Seviye 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791436029661184
+    m_Localized: Seviye 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791437577359360
+    m_Localized: Seviye 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791439183777792
+    m_Localized: Seviye 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791440697921536
+    m_Localized: Seviye 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12791442073653248
+    m_Localized: Seviye 9
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

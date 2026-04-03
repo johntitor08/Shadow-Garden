@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Story_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 3a6c4c5806ff6a74cb6a1c32770eac9f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12989173760
+    m_Localized: "Bir g\xFCn bu diyarlarda bir ninja ya\u015Farm\u0131\u015F. En
+      b\xFCy\xFCk hayali avatar olmakm\u0131\u015F."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1756857953095680
+    m_Localized: "Ustas\u0131 ona ejder topundan bahsetmi\u015F. Ejder topunu elde
+      eden ki\u015Fi 4 elementte ustala\u015F\u0131rm\u0131\u015F."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757440957157376
+    m_Localized: "Ustas\u0131 ona \u015F\xF6yle demi\u015F: \"Avatar olman\u0131n
+      tek yolu ejder topuna sahip olmakt\u0131r.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757444224520192
+    m_Localized: "Bu ninja ejder topunu bulmaya karar vermi\u015F ve maceraya at\u0131lm\u0131\u015F."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758137907875840
+    m_Localized: "Dilini Se\xE7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758624371642368
+    m_Localized: Onayla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758796203888640
+    m_Localized: "Sahneyi Ge\xE7 -->"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758789832740864
+    m_Localized: "Hikayeyi Ge\xE7 -->"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1758790742904832
+    m_Localized: Devam edecek...
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

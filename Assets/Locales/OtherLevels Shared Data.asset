@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: OtherLevels Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: OtherLevels
+  m_TableCollectionNameGuidString: 3a216c4f0761d5347a88bcadfb287758
+  m_Entries:
+  - m_Id: 169847754752
+    m_Key: stage1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173614239744
+    m_Key: stage2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 176235679744
+    m_Key: stage3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179733729280
+    m_Key: stage4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182841708544
+    m_Key: stage5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188285915136
+    m_Key: downInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 189829419008
+    m_Key: L8Lavinia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191406477312
+    m_Key: L8Authory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212763799916544
+    m_Key: L4D1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212790794457088
+    m_Key: L4D2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212804430139392
+    m_Key: L4D3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212817994518528
+    m_Key: L4D4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12743165760442368
+    m_Key: L3M1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17323643087122432
+    m_Key: God
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17323676566056960
+    m_Key: GodGuardian
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7719500007832551425
+  references:
+    version: 2
+    RefIds:
+    - rid: 7719500007832551425
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1737102507663

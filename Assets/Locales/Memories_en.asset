@@ -1,0 +1,847 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Memories_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 711d309e098fdac4ab241f8f29590fc2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2688831135879217
+    m_Localized: Yes! Do you know him?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879216
+    m_Localized: I set a trap for a Wizard. Apparently you came instead of him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879215
+    m_Localized: I put it here on purpose.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879214
+    m_Localized: Anyway, you can't take the Dragonspine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879213
+    m_Localized: I came here from Avalon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879212
+    m_Localized: Calm down. I'm Tesla, the scientist.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879211
+    m_Localized: Hi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879210
+    m_Localized: What?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879209
+    m_Localized: We met him on our adventure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879208
+    m_Localized: Wizard, do you mean Emin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879207
+    m_Localized: What just happened?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879206
+    m_Localized: WTF going on!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879205
+    m_Localized: Yea, I think so.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879204
+    m_Localized: Okay, let's go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879203
+    m_Localized: He said if we bring this object he will save my girlfriend.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879202
+    m_Localized: I have to save my lover!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879201
+    m_Localized: I guess...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879200
+    m_Localized: Why?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879199
+    m_Localized: Who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879198
+    m_Localized: What!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879197
+    m_Localized: I think, we found it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879196
+    m_Localized: She is the princess of Arcadia. I will marry her!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879195
+    m_Localized: We must protect her from strangers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879194
+    m_Localized: I think so...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879193
+    m_Localized: Did you? I see...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879192
+    m_Localized: Yes, my King!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879191
+    m_Localized: "My King, we have just brought her.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879190
+    m_Localized: "Yes, my King!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879189
+    m_Localized: "My Lord, we suppose, her boyfriend will come to her rescue.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879188
+    m_Localized: "Thank you for your support :)\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879187
+    m_Localized: "Aight then, let's find the Dragonspine!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879186
+    m_Localized: "Where can we find it?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879185
+    m_Localized: "No problema =)\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879184
+    m_Localized: "You can find it at Xalangwo mountain.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879183
+    m_Localized: "Then, I'll be able to use my magical sphere.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879182
+    m_Localized: "If you want to save your friend, bring me the Dragonspine.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879181
+    m_Localized: "Bro, don't worry! We will save your girlfriend.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879180
+    m_Localized: "Yeah, let's go!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879179
+    m_Localized: "I love you too <3\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879178
+    m_Localized: "I love you darling <3\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879177
+    m_Localized: "We'll see xD\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879176
+    m_Localized: "Don't worry, we'll kill him. The King wants you for himself.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879175
+    m_Localized: "\"Futile, you can't trust anyone.\" he said.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879174
+    m_Localized: "Our king told us to keep you safe.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879173
+    m_Localized: "Maltoroz\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879172
+    m_Localized: "He'll come to save me. You can't do anything.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879171
+    m_Localized: "I'm going to marry Ahmettny, you can't prevent it.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879170
+    m_Localized: "He is my lover! Tell him to stop bothering us.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879169
+    m_Localized: "What do you want from me?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879168
+    m_Localized: "Who are you?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073505
+    m_Localized: Why don't we have together =)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073504
+    m_Localized: What a beautiful day.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073503
+    m_Localized: I hope so, I will try my best for them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073502
+    m_Localized: I wonder where is Ahmettny...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073501
+    m_Localized: He is busy after all...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073500
+    m_Localized: Yes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073499
+    m_Localized: Who is she, Erina?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073498
+    m_Localized: If you find anything interesting, take it for me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073497
+    m_Localized: Ah, yes. But I have a request.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073496
+    m_Localized: She is my master.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073495
+    m_Localized: Yes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073494
+    m_Localized: I borrowed it from her for my scientific research and she let me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073493
+    m_Localized: Anyway, this object already has an owner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073492
+    m_Localized: But that doesn't matter to Emin, he only thinks of himself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073491
+    m_Localized: This way it upsets the balance of nature.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073490
+    m_Localized: But as its energy is used, absorbs energy from the surrounding.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073489
+    m_Localized: Dragonspine is a powerful source of energy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073488
+    m_Localized: So you sent them to steal!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073487
+    m_Localized: I caught you, sneaky Wizard!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073486
+    m_Localized: Yo Emin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073485
+    m_Localized: Thank you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073484
+    m_Localized: Where is there?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073483
+    m_Localized: Oh, I see...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073482
+    m_Localized: Who is Erina?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073481
+    m_Localized: But good news, we found the Dragonspine!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073480
+    m_Localized: Yo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073479
+    m_Localized: Let's go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073478
+    m_Localized: It's shining!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073477
+    m_Localized: Sure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073476
+    m_Localized: What's wrong?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073475
+    m_Localized: He wanted to come.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073474
+    m_Localized: Yo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073473
+    m_Localized: Follow this map.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073472
+    m_Localized: She is in the Castle of Avalon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879233
+    m_Localized: Okay, let's check where is your friend.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879232
+    m_Localized: So, will you lend the Dragonspine for them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879231
+    m_Localized: She is also a very famous person.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879230
+    m_Localized: What?! I am fully aware of this. I would avoid unnecessary use.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879229
+    m_Localized: Hey, they want to save their friends!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879228
+    m_Localized: Good grief...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879227
+    m_Localized: Why did you bring him??
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879226
+    m_Localized: WHAAAAAT!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879225
+    m_Localized: What?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879224
+    m_Localized: Yes, I'm gonna beat him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879223
+    m_Localized: Hey, do you know where is Authory?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879222
+    m_Localized: Yes, come with me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879221
+    m_Localized: Authory, the King?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879220
+    m_Localized: Then, let's go to him together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879219
+    m_Localized: Ohh, I see...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831135879218
+    m_Localized: What adventure?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073555
+    m_Localized: So, are you going?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073554
+    m_Localized: I haven't had any friends for a long time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073553
+    m_Localized: Yes, I live far from people.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073552
+    m_Localized: Wow, what a wonderful map!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073551
+    m_Localized: Wow, let me see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073550
+    m_Localized: What's in your hand?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073549
+    m_Localized: This is my garden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073548
+    m_Localized: Hey, I'm Frisk. I live here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073547
+    m_Localized: Wow, thank you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073546
+    m_Localized: We have to save someone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073545
+    m_Localized: Wow, what kind of place is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073544
+    m_Localized: Let's go then :)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073543
+    m_Localized: Really?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073542
+    m_Localized: Yeah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073541
+    m_Localized: Is this your first time seeing a map?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073540
+    m_Localized: Oh, this is a map of the continent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073539
+    m_Localized: Hey, who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073538
+    m_Localized: WHAT?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073537
+    m_Localized: Sure, Mr. Tesla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073536
+    m_Localized: We have to hurry!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073535
+    m_Localized: I've heard from strangers who say they're friends.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073534
+    m_Localized: Yes, Emin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073533
+    m_Localized: The Princess is kidnapped!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073532
+    m_Localized: We have a big problem!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073531
+    m_Localized: Take me there!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073530
+    m_Localized: May I pass to the castle?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073529
+    m_Localized: Of course, I did. haha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073528
+    m_Localized: Bye.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073527
+    m_Localized: I have just finally awakened!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073526
+    m_Localized: Damn, I can't hit him!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073525
+    m_Localized: My amazing martial art!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073524
+    m_Localized: Y'kidding me? Just watch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073523
+    m_Localized: I will rule the world by fear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073522
+    m_Localized: I am the absolute evil!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073521
+    m_Localized: I'm starting this by killing all of you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073520
+    m_Localized: Listen, kid. I am the disaster that will befall this world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073519
+    m_Localized: Stay away, girl. I will take him down.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073518
+    m_Localized: Hahaha. I'm garou the great monster.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073517
+    m_Localized: You beat him!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073516
+    m_Localized: OMG!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073515
+    m_Localized: Garou, I trust you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073514
+    m_Localized: O-ok...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073513
+    m_Localized: What??
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073512
+    m_Localized: What's wrong?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073511
+    m_Localized: Then, your monster game ends here xD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073510
+    m_Localized: Who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073509
+    m_Localized: The King and the Knight.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073508
+    m_Localized: I hope they come to an agreement.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073507
+    m_Localized: He's trying his best.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831140073506
+    m_Localized: I wish the King would come too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267825
+    m_Localized: Im sama, what can you say about Erina?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267824
+    m_Localized: Indeed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267823
+    m_Localized: You're right, they're all my creatures.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267822
+    m_Localized: Being a god is so boring, it's fun to watch human beings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267821
+    m_Localized: If I tell you, it will spoil your fun, I suggest you watch it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267820
+    m_Localized: This is my award.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267819
+    m_Localized: The person who finds the Dragon Ball will be the next god candidate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267818
+    m_Localized: I'm just kidding, I'm already immortal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267817
+    m_Localized: Dragon ball will be mine and I will be immortal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267816
+    m_Localized: He is a magic bone user.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267815
+    m_Localized: No, he has the ability to regenerate himself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267814
+    m_Localized: She will be the most important person in this story.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267813
+    m_Localized: Let's check out Asgard Castle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267812
+    m_Localized: But I have no idea about Maltoroz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267811
+    m_Localized: Yeah, I know where is Erina sama.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267810
+    m_Localized: So, what's going on?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267809
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267808
+    m_Localized: Here I am.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267807
+    m_Localized: Got it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267806
+    m_Localized: He will come here soon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267805
+    m_Localized: Do you have any clue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267804
+    m_Localized: I don't know.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267803
+    m_Localized: Hey, where is the Princess Erina sama?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267802
+    m_Localized: We gotta find Maltoroz and Erina.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267801
+    m_Localized: Welcome.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267800
+    m_Localized: Not yet. Emin is the Wizard, I will ask him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267799
+    m_Localized: He was with me, I can't find him right now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267798
+    m_Localized: What about Maltoroz?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267797
+    m_Localized: No idea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267796
+    m_Localized: See you again, Authory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267795
+    m_Localized: Lavinia, I will introduce you to someone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267794
+    m_Localized: Yes, I want to find it either.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267793
+    m_Localized: I can help you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267792
+    m_Localized: I'm Erina.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267791
+    m_Localized: Goodbye.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267790
+    m_Localized: Ninja Nevoksa and Knight Ahmettny.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267789
+    m_Localized: I have to stop them too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267788
+    m_Localized: Who is Lavinia?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267787
+    m_Localized: So what will you do now, Garou?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267786
+    m_Localized: Good luck to you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267785
+    m_Localized: Come with us.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267784
+    m_Localized: Wow, really?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267783
+    m_Localized: She's a hologram human I made before.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267782
+    m_Localized: I'll find the Dragon Ball.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267781
+    m_Localized: Oh, so you are that Shadow Samurai everyone is talking about.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267780
+    m_Localized: Who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267779
+    m_Localized: Understood, Erina sama.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267778
+    m_Localized: What about me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267777
+    m_Localized: Yes, I'm strong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267776
+    m_Localized: Oh, I can help you if you want.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267831
+    m_Localized: Are we sure they are all human?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267830
+    m_Localized: But I see great potential in Garou as well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267829
+    m_Localized: Mighty warrior, Ahmettny. I'm placing my bet on him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267828
+    m_Localized: I wonder who will win this game :)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267827
+    m_Localized: You have created this universe just for fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2688831144267826
+    m_Localized: Is Maltoroz dead?
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

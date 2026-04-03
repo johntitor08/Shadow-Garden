@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: eb7406d7222373b4fa7182c3c30d60fb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Amazing Slab Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f8a193f7ca1caf347a23979c549cf511, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
