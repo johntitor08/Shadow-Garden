@@ -49,40 +49,39 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts 2\EnemySpandam.cs" />
-    <Compile Include="Assets\Scripts 2\Minimap.cs" />
     <Compile Include="Assets\Scripts\BackgroundScaler.cs" />
-    <Compile Include="Assets\Scripts 2\Portal.cs" />
+    <Compile Include="Assets\Scripts\Border.cs" />
     <Compile Include="Assets\Scripts\FinishScript.cs" />
-    <Compile Include="Assets\Scripts 2\PanelController.cs" />
-    <Compile Include="Assets\Scripts 2\TimelineController.cs" />
-    <Compile Include="Assets\Scripts 2\AuthoryFollow.cs" />
     <Compile Include="Assets\Scripts\YıldızScript.cs" />
-    <Compile Include="Assets\Scripts 2\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\MultiLanguage.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Scripts 2\Boss.cs" />
-    <Compile Include="Assets\Scripts 2\Border.cs" />
+    <Compile Include="Assets\Scripts\MemoryScene.cs" />
+    <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts 2\MultiLanguage.cs" />
-    <Compile Include="Assets\Scripts 2\Settings.cs" />
-    <Compile Include="Assets\Scripts 2\YandexGameEvents.cs" />
+    <Compile Include="Assets\Scripts\AhmettnyFight.cs" />
     <Compile Include="Assets\Scripts\BeginningScenes.cs" />
     <Compile Include="Assets\Scripts\DestroyerByTime.cs" />
-    <Compile Include="Assets\Scripts 2\Shield.cs" />
     <Compile Include="Assets\Scripts\ElmaScript.cs" />
-    <Compile Include="Assets\Scripts 2\WeakPoint.cs" />
     <Compile Include="Assets\Scripts\Sayac.cs" />
+    <Compile Include="Assets\Scripts\PanelController.cs" />
     <Compile Include="Assets\Scripts\ScoreGenerator.cs" />
-    <Compile Include="Assets\Scripts 2\AhmettnyFight.cs" />
+    <Compile Include="Assets\Scripts\ButtonEvents.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
+    <Compile Include="Assets\Scripts\TimelineController.cs" />
+    <Compile Include="Assets\Scripts\Portal.cs" />
+    <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts 2\Sword.cs" />
+    <Compile Include="Assets\Scripts\AuthoryFollow.cs" />
+    <Compile Include="Assets\Scripts\Boss.cs" />
+    <Compile Include="Assets\Scripts\YandexGameEvents.cs" />
     <Compile Include="Assets\Scripts\SeviyelerYoneticisi.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\MermiHareket.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
-    <Compile Include="Assets\Scripts 2\ButtonEvents.cs" />
+    <Compile Include="Assets\Scripts\Minimap.cs" />
+    <Compile Include="Assets\Scripts\WeakPoint.cs" />
     <Compile Include="Assets\Scripts\KarakterHareket.cs" />
-    <Compile Include="Assets\Scripts 2\MemoryScene.cs" />
+    <Compile Include="Assets\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\SeviyeBitir.cs" />
   </ItemGroup>
   <ItemGroup>

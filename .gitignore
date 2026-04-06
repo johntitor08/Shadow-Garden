@@ -1,3 +1,15 @@
 /Logs
 /Temp
 /UserSettings
+/Library
+/Obj
+/Build
+*Library
+*Temp
+*Obj
+*Build
+*Logs
+*.user
+*.suo
+*.cache
+*.log
