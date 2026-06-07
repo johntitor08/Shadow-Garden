@@ -25,7 +25,10 @@ public class MenuController : MonoBehaviour
         #if UNITY_WEBGL && !UNITY_EDITOR
 
         yandexGameEvents = FindObjectOfType<YandexGameEvents>();
-        yandexGameEvents.SendGameplayStart();
+        if (yandexGameEvents != null)
+        {
+            yandexGameEvents.SendGameplayStart();
+        }
 
         #endif
 
@@ -68,7 +71,10 @@ public class MenuController : MonoBehaviour
 
         #if UNITY_WEBGL && !UNITY_EDITOR
 
-        yandexGameEvents.SendGameplayStart();
+        if (yandexGameEvents != null)
+        {
+            yandexGameEvents.SendGameplayStart();
+        }
 
         #endif
     }
@@ -83,7 +89,10 @@ public class MenuController : MonoBehaviour
 
 #       if UNITY_WEBGL && !UNITY_EDITOR
 
-        yandexGameEvents.SendGameplayStop();
+        if (yandexGameEvents != null)
+        {
+            yandexGameEvents.SendGameplayStop();
+        }
 
         #endif
     }
@@ -119,6 +128,7 @@ public class MenuController : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         ScoreGenerator.yildizpuani_int = 0;
         SceneManager.LoadScene("Seviyeler");
     }

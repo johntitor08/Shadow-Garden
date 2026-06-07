@@ -12,7 +12,7 @@ public class Border : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("karakter") || collision.gameObject.CompareTag("mermi") || collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("karakter") || collision.gameObject.CompareTag("characterBullet") || collision.gameObject.CompareTag("enemyBullet") || collision.gameObject.CompareTag("enemy"))
         {
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
