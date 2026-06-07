@@ -55,6 +55,6 @@ public class MultiLanguage : MonoBehaviour
     public void Accept()
     {
         // "Story" sahnesini yükle
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Story");
     }
 }

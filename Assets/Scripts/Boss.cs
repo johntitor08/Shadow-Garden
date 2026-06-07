@@ -36,7 +36,12 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        target = GameObject.FindGameObjectWithTag("karakter").GetComponent<Transform>();
+        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+        if (karakter == null)
+        {
+            return;
+        }
+        target = karakter.transform;
 
         if (transform.localScale.x > 0)
         {

@@ -28,7 +28,7 @@ public class ScoreGenerator : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Level7")
         {
-            if (PlayerPrefs.GetString("Language") == "English")
+            if (PlayerPrefs.GetString("Language", "English") != "Turkish")
             {
                 scorePoint.text = "Score: " + scorePoint_int.ToString();
                 stageNumber.text = "Stage: " + stageNumber_int.ToString();
@@ -36,7 +36,7 @@ public class ScoreGenerator : MonoBehaviour
             else if (PlayerPrefs.GetString("Language") == "Turkish")
             {
                 scorePoint.text = "Skor: " + scorePoint_int.ToString();
-                stageNumber.text = "Aþama: " + stageNumber_int.ToString();
+                stageNumber.text = "AÅŸama: " + stageNumber_int.ToString();
             }
         }
 

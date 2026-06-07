@@ -711,7 +711,7 @@ public class KarakterHareket : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("enemyBullet") || collision.gameObject.tag == "characterBullet" && Shield.reverse)
+        if (collision.gameObject.CompareTag("enemyBullet") || (collision.gameObject.tag == "characterBullet" && Shield.reverse))
         {
             if (time <= 0f)
             {
@@ -875,9 +875,9 @@ public class KarakterHareket : MonoBehaviour
         anim.SetTrigger("isDamaged");
         audioSourceHurt.PlayOneShot(audioClipHurt);
 
-        for (int i = canSayisi; i >= canSayisi; i--)
+        if (canSayisi >= 0 && canSayisi < can.Length)
         {
-            can[i].SetActive(false);
+            can[canSayisi].SetActive(false);
         }
     }
 

@@ -34,8 +34,14 @@ public class Enemy : MonoBehaviour
                 health = 7;
                 maxHealth = 7;
                 currentHealth = maxHealth;
-                healthbar.SetMaxHealth(maxHealth);
-                bossHealthCanvas.SetActive(false);
+                if (healthbar != null)
+                {
+                    healthbar.SetMaxHealth(maxHealth);
+                }
+                if (bossHealthCanvas != null)
+                {
+                    bossHealthCanvas.SetActive(false);
+                }
             }
             else
             {
@@ -54,6 +60,11 @@ public class Enemy : MonoBehaviour
 
         }
 
+        if (gameObject.CompareTag("heraclus"))
+        {
+            health = 3;
+        }
+
         //StartCoroutine(AtesEt());
         //InvokeRepeating("AtesEt", 0.5f, 1f);
         anim = GetComponent<Animator>();
@@ -65,8 +76,14 @@ public class Enemy : MonoBehaviour
         {
             maxHealth = 10;
             currentHealth = maxHealth;
-            healthbar.SetMaxHealth(maxHealth);
-            bossHealthCanvas.SetActive(false);
+            if (healthbar != null)
+            {
+                healthbar.SetMaxHealth(maxHealth);
+            }
+            if (bossHealthCanvas != null)
+            {
+                bossHealthCanvas.SetActive(false);
+            }
 
         }
 
@@ -74,7 +91,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        target = GameObject.FindGameObjectWithTag("karakter").GetComponent<Transform>();
+        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+        if (karakter == null)
+        {
+            return;
+        }
+        target = karakter.transform;
 
         if (transform.localScale.x > 0)
         {
