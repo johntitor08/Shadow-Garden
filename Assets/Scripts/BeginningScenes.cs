@@ -9,17 +9,31 @@ public class BeginningScenes : MonoBehaviour
     {
         ScoreGenerator.yildizpuani_int = 0;
         Time.timeScale = 1;
+        ApplyLogoSize();
     }
 
-    private void Update()
+    private void ApplyLogoSize()
     {
+        // gameLogo is only assigned in scenes that actually show the logo (e.g. AnaMenu);
+        // in others (e.g. Seviyeler) it is null, so guard before use.
+        if (gameLogo == null)
+        {
+            return;
+        }
+
+        RectTransform logoRect = gameLogo.GetComponent<RectTransform>();
+        if (logoRect == null)
+        {
+            return;
+        }
+
         if (PlayerPrefs.GetString("Language") == "English")
         {
-            gameLogo.GetComponent<RectTransform>().sizeDelta = new Vector2(1300, 175);
+            logoRect.sizeDelta = new Vector2(1300, 175);
         }
         else
         {
-            gameLogo.GetComponent<RectTransform>().sizeDelta = new Vector2(1250, 200);
+            logoRect.sizeDelta = new Vector2(1250, 200);
         }
     }
 

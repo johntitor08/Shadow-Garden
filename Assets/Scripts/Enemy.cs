@@ -134,7 +134,7 @@ public class Enemy : MonoBehaviour
                 }
                 else if (gameObject.CompareTag("heraclus"))
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, target.position, 0.005f);
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, 0.05f);
                 }
 
                 if (gameObject.CompareTag("jumperEnemy"))

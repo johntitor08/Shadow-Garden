@@ -1228,7 +1228,7 @@ public class KarakterHareket : MonoBehaviour
         }
 
 
-        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.tag == "bigEnemy" || collision.gameObject.CompareTag("superEnemy") || collision.gameObject.CompareTag("jumperEnemy"))
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.tag == "bigEnemy" || collision.gameObject.CompareTag("superEnemy") || collision.gameObject.CompareTag("jumperEnemy") || collision.gameObject.CompareTag("heraclus"))
         {
             if (time <= 0f)
             {
