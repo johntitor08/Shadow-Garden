@@ -1257,6 +1257,13 @@ public class KarakterHareket : MonoBehaviour
         {
             warningText.SetActive(false);
         }
+
+        // Leaving a shadow floor closes the "flash" light, so shadow-floor grounds return
+        // to normal even if the player jumps off into the air instead of onto a normal floor.
+        if (collision.gameObject.CompareTag("shadowFloor"))
+        {
+            pointLight.SetActive(false);
+        }
     }
 
     public void Shake()

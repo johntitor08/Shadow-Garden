@@ -127,14 +127,40 @@ public class Enemy : MonoBehaviour
         {
             if (hareketEt == true)
             {
+                // Ground enemies (with gravity) chase the player horizontally only, keeping
+                // their own Y, so they don't dive toward the player's height and fall off /
+                // through platforms. Flying enemies (gravityScale 0, e.g. heraclus) chase fully.
+                bool grounded = rb != null && rb.gravityScale > 0f;
+                Vector3 chaseTarget = grounded
+                    ? new Vector3(target.position.x, transform.position.y, transform.position.z)
+                    : target.position;
+
+                // Edge detection: a ground enemy won't step forward if there's no floor ahead,
+                // so it stops at platform edges instead of chasing the player off into a pit.
+                // Flying enemies (gravityScale 0) ignore this.
+                bool canStep = true;
+                if (grounded)
+                {
+                    Collider2D col = GetComponent<Collider2D>();
+                    float halfW = col != null ? col.bounds.extents.x : 0.5f;
+                    float halfH = col != null ? col.bounds.extents.y : 0.5f;
+                    float dir = Mathf.Sign(chaseTarget.x - transform.position.x);
+                    if (dir != 0f)
+                    {
+                        Vector2 origin = new Vector2(transform.position.x + dir * (halfW + 0.1f), transform.position.y - halfH - 0.05f);
+                        RaycastHit2D floorAhead = Physics2D.Raycast(origin, Vector2.down, 1.2f);
+                        canStep = floorAhead.collider != null && !floorAhead.collider.isTrigger;
+                    }
+                }
+
                 if (gameObject.CompareTag("enemy") || gameObject.CompareTag("jumperEnemy"))
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, target.position, 0.05f);
-
+                    if (canStep)
+                        transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f);
                 }
                 else if (gameObject.CompareTag("heraclus"))
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, target.position, 0.05f);
+                    transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f);
                 }
 
                 if (gameObject.CompareTag("jumperEnemy"))
@@ -164,7 +190,8 @@ public class Enemy : MonoBehaviour
                 }
 
                 transform.LookAt(transform.position);
-                transform.position = Vector2.Lerp(transform.position, target.position, 0.001f);
+                if (canStep)
+                    transform.position = Vector2.Lerp(transform.position, chaseTarget, 0.001f);
 
             }
             
