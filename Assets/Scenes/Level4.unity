@@ -7853,7 +7853,7 @@ PrefabInstance:
     - target: {fileID: 5034263294051271542, guid: 17a272d636843bf47b6285cc4cca2f36, type: 3}
       propertyPath: globalLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 980248295}
     - target: {fileID: 5034263294051271542, guid: 17a272d636843bf47b6285cc4cca2f36, type: 3}
       propertyPath: harekethizi
       value: 10

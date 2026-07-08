@@ -634,6 +634,11 @@ public class KarakterHareket : MonoBehaviour
         if (collision.gameObject.CompareTag("shadowFloor"))
         {
             pointLight.SetActive(true);
+            // On shadow floors the world goes dark (only the character's flash lights the area).
+            if (globalLight != null)
+            {
+                globalLight.SetActive(false);
+            }
             //pointLight.intensity = 20;
             //pointLight.pointLightOuterRadius = 5;
             //pointLight.pointLightInnerRadius = 2;
@@ -672,6 +677,11 @@ public class KarakterHareket : MonoBehaviour
         if (collision.gameObject.CompareTag("zemin") && SceneManager.GetActiveScene().name != "Level9")
         {
             pointLight.SetActive(false);
+            // Back on normal ground: world lighting returns to normal.
+            if (globalLight != null)
+            {
+                globalLight.SetActive(true);
+            }
         }
 
         if (collision.gameObject.CompareTag("zemin") || collision.gameObject.CompareTag("fallenFloor") || collision.gameObject.CompareTag("upperFloor") || collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("shadowFloor") || collision.gameObject.CompareTag("bigEnemy") || collision.gameObject.CompareTag("rotatingFloor"))
@@ -1258,11 +1268,16 @@ public class KarakterHareket : MonoBehaviour
             warningText.SetActive(false);
         }
 
-        // Leaving a shadow floor closes the "flash" light, so shadow-floor grounds return
-        // to normal even if the player jumps off into the air instead of onto a normal floor.
+        // Leaving a shadow floor closes the "flash": the point light turns off and the
+        // global light returns, so shadow-floor grounds go back to normal even if the
+        // player jumps off into the air instead of onto a normal floor.
         if (collision.gameObject.CompareTag("shadowFloor"))
         {
             pointLight.SetActive(false);
+            if (globalLight != null)
+            {
+                globalLight.SetActive(true);
+            }
         }
     }
 
