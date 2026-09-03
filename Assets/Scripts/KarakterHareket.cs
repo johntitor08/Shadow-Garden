@@ -29,10 +29,6 @@ public class KarakterHareket : MonoBehaviour
     public AudioClip audioClipHurt;
     private bool ziplamaReset;
     public bool ziplayabilir;
-    // Zıplatan zemin / upperFloor teması Update'te doğrudan fizikten sorgulanıyor:
-    // OnCollisionStay2D, Rigidbody2D uyuduğunda (karakter zeminde beklerken) çalışmayı
-    // bırakıyor, GetContacts ise uyuyan gövdede de temasları döndürüyor.
-    private readonly ContactPoint2D[] temasNoktalari = new ContactPoint2D[16];
     public GameObject globalLight;
     public GameObject pointLight;
     public GameObject shootInfo;
@@ -308,17 +304,6 @@ public class KarakterHareket : MonoBehaviour
         {
             //rb.AddForce(Vector2.up * ziplamahizi * 100);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, ziplamahizi);
-
-            if (ZeminTemasVar("ziplatanzemin"))
-            {
-                rb.AddForce(150 * ziplamahizi * Vector2.up);
-            }
-
-            if (ZeminTemasVar("upperFloor"))
-            {
-                rb.AddForce(80 * ziplamahizi * Vector2.up);
-            }
-
             karakteryerde = false;
             ziplamahakki--;
         }
@@ -630,11 +615,6 @@ public class KarakterHareket : MonoBehaviour
         if (collision.gameObject == null)
         {
             return;
-        }
-
-        if (collision.gameObject.CompareTag("ziplatanzemin"))
-        {
-            ziplamahakki = 1;
         }
 
         if (collision.gameObject.CompareTag("renklizemin"))
@@ -1239,11 +1219,21 @@ public class KarakterHareket : MonoBehaviour
 
         if (collision.gameObject.CompareTag("ziplatanzemin"))
         {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                rb.AddForce(150 * ziplamahizi * Vector2.up);
+            }
+
             ziplamahakki = 1;
         }
 
         if (collision.gameObject.CompareTag("upperFloor"))
         {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                rb.AddForce(80 * ziplamahizi * Vector2.up);
+            }
+
             ziplamahakki = 1;
         }
 
@@ -1289,24 +1279,6 @@ public class KarakterHareket : MonoBehaviour
                 globalLight.SetActive(true);
             }
         }
-    }
-
-    // Karakterin şu an verilen etikete sahip bir zemine değip değmediğini fizikten sorgular.
-    private bool ZeminTemasVar(string etiket)
-    {
-        int temasSayisi = rb.GetContacts(temasNoktalari);
-
-        for (int i = 0; i < temasSayisi; i++)
-        {
-            Collider2D temasCollider = temasNoktalari[i].collider;
-
-            if (temasCollider != null && temasCollider.CompareTag(etiket))
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     public void Shake()
