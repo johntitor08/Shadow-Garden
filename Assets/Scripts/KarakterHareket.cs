@@ -33,6 +33,11 @@ public class KarakterHareket : MonoBehaviour
     // OnCollisionStay2D, Rigidbody2D uyuduğunda (karakter zeminde beklerken) çalışmayı
     // bırakıyor, GetContacts ise uyuyan gövdede de temasları döndürüyor.
     private readonly ContactPoint2D[] temasNoktalari = new ContactPoint2D[16];
+    // Level6 maze bolgesi: shadowFloor zeminlerinden hesaplaniyor, boylece arka planin
+    // siyah kalmasi mazeEnter tetigine bagli olmuyor.
+    private Bounds mazeBolgesi;
+    private bool mazeBolgesiVar;
+    private Color mazeDisiArkaPlan = Color.black;
     public GameObject globalLight;
     public GameObject pointLight;
     public GameObject shootInfo;
@@ -170,6 +175,13 @@ public class KarakterHareket : MonoBehaviour
             ziplamahizi = 16;
             gameObject.transform.position = new Vector3(513.5f, 36, 0);
             mazeMusic = GameObject.Find("Music").GetComponent<AudioSource>();
+
+            if (cam != null)
+            {
+                mazeDisiArkaPlan = cam.backgroundColor;
+            }
+
+            MazeBolgesiniHesapla();
         }
         else if (SceneManager.GetActiveScene().name == "Level8")
         {
@@ -368,7 +380,15 @@ public class KarakterHareket : MonoBehaviour
             ziplamaReset = false;
         }
 
-        if (SceneManager.GetActiveScene().name == "Level4")
+        if (SceneManager.GetActiveScene().name == "Level6")
+        {
+            if (cam != null && mazeBolgesiVar)
+            {
+                Vector3 duzlemKonumu = new Vector3(transform.position.x, transform.position.y, mazeBolgesi.center.z);
+                cam.backgroundColor = mazeBolgesi.Contains(duzlemKonumu) ? Color.black : mazeDisiArkaPlan;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Level4")
         {
             if (timeline <= 0f)
             {
@@ -757,7 +777,7 @@ public class KarakterHareket : MonoBehaviour
                 Destroy(collision.gameObject);
                 ScoreGenerator.yildizpuani_int = 0;
             }
-            else
+            else if (warningText != null)
             {
                 warningText.SetActive(true);
             }
@@ -1049,12 +1069,22 @@ public class KarakterHareket : MonoBehaviour
 
         if (collision.gameObject.name == "mazeEnter")
         {
-            cam.backgroundColor = Color.black;
+            // Bu alanlar Level6'da inspector'da bagli degil; biri eksik diye
+            // blogun geri kalani (muzik, mazeEnter'in yok edilmesi) atlanmasin.
+            if (cam != null)
+            {
+                cam.backgroundColor = Color.black;
+            }
+
             mazeMusic.clip = mazeMusicClip;
             mazeMusic.Play();
             Destroy(collision.gameObject);
-            cinemachine.SetBool("enlarge", false);
-            cinemachine.SetBool("shrink", true);
+
+            if (cinemachine != null)
+            {
+                cinemachine.SetBool("enlarge", false);
+                cinemachine.SetBool("shrink", true);
+            }
         }
 
         if (collision.gameObject.name == "stage1")
@@ -1273,7 +1303,7 @@ public class KarakterHareket : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.name == "mazeBorder")
+        if (collision.gameObject.name == "mazeBorder" && warningText != null)
         {
             warningText.SetActive(false);
         }
@@ -1292,6 +1322,40 @@ public class KarakterHareket : MonoBehaviour
     }
 
     // Karakterin şu an verilen etikete sahip bir zemine değip değmediğini fizikten sorgular.
+    // Maze bolgesini shadowFloor zeminlerinin kapladigi alandan cikarir; seviye tasarimi
+    // degisirse elle koordinat guncellemek gerekmez.
+    private void MazeBolgesiniHesapla()
+    {
+        GameObject[] golgeZeminler = GameObject.FindGameObjectsWithTag("shadowFloor");
+        mazeBolgesiVar = false;
+
+        for (int i = 0; i < golgeZeminler.Length; i++)
+        {
+            Collider2D golgeCollider = golgeZeminler[i].GetComponent<Collider2D>();
+
+            if (golgeCollider == null)
+            {
+                continue;
+            }
+
+            if (!mazeBolgesiVar)
+            {
+                mazeBolgesi = golgeCollider.bounds;
+                mazeBolgesiVar = true;
+            }
+            else
+            {
+                mazeBolgesi.Encapsulate(golgeCollider.bounds);
+            }
+        }
+
+        if (mazeBolgesiVar)
+        {
+            // Kenarda arka planin titrememesi icin pay birak.
+            mazeBolgesi.Expand(new Vector3(12f, 12f, 1000f));
+        }
+    }
+
     private bool ZeminTemasVar(string etiket)
     {
         int temasSayisi = rb.GetContacts(temasNoktalari);
