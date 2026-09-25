@@ -37,12 +37,17 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
-        if (karakter == null)
+        // Oyuncuyu her karede aramak yerine sakla; oyuncu yok edilince veya (Level9'daki gibi)
+        // kontrol edilen karakter degisip eskisi pasif olunca yeniden ara.
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
-            return;
+            GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+            if (karakter == null)
+            {
+                return;
+            }
+            target = karakter.transform;
         }
-        target = karakter.transform;
         // 60 FPS'e gore ayarli adimlar; deltaTime ile olcekleyince yenileme hizindan
         // bagimsiz olur ve oyun duraklatildiginda boss da durur.
         float kare = Time.deltaTime * ReferansFps;

@@ -92,12 +92,17 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
-        if (karakter == null)
+        // Oyuncuyu her karede aramak yerine sakla; oyuncu yok edilince veya (Level9'daki gibi)
+        // kontrol edilen karakter degisip eskisi pasif olunca yeniden ara.
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
-            return;
+            GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+            if (karakter == null)
+            {
+                return;
+            }
+            target = karakter.transform;
         }
-        target = karakter.transform;
         // Hareket miktarlari 60 FPS icin ayarlanmisti; deltaTime ile olceklemek hizi
         // ekran yenileme hizindan bagimsiz yapar ve oyun duraklatildiginda (timeScale 0) durdurur.
         float kare = Time.deltaTime * ReferansFps;

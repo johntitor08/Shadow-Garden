@@ -27,7 +27,7 @@ public class MenuController : MonoBehaviour
 
         #if UNITY_WEBGL && !UNITY_EDITOR
 
-        yandexGameEvents = FindObjectOfType<YandexGameEvents>();
+        yandexGameEvents = FindFirstObjectByType<YandexGameEvents>();
         if (yandexGameEvents != null)
         {
             yandexGameEvents.SendGameplayStart();
