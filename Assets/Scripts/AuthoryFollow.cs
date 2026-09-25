@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class AuthoryFollow : MonoBehaviour
 {
+    const float ReferansFps = 60f;
     public bool faceRight;
     public GameObject ahmettny;
     public GameObject canvas;
@@ -31,9 +32,12 @@ public class AuthoryFollow : MonoBehaviour
 
     void Update()
     {
+        // 60 FPS'e gore ayarli adimlar; deltaTime ile olceklenince duraklatmada da durur.
+        float kare = Time.deltaTime * ReferansFps;
+
         if (!GameObject.Find("step2") && gameObject.name == "authory")
         {
-            transform.position = Vector2.MoveTowards(transform.position, ahmettny.transform.position, 0.05f);
+            transform.position = Vector2.MoveTowards(transform.position, ahmettny.transform.position, 0.05f * kare);
 
             if (!earthInvokeStarted)
             {
@@ -53,7 +57,7 @@ public class AuthoryFollow : MonoBehaviour
 
         if (GameObject.Find("erina") && gameObject.name == "garou" && Sword.erinavsgarou == 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, erina.transform.position, 0.05f);
+            transform.position = Vector2.MoveTowards(transform.position, erina.transform.position, 0.05f * kare);
             anim.SetBool("attack", true);
 
             if (faceRight == true && erina.transform.position.x - transform.position.x < 0 ||
@@ -65,7 +69,7 @@ public class AuthoryFollow : MonoBehaviour
 
         if (GameObject.Find("nevoksa") && gameObject.name == "darkGarou" && Sword.erinavsgarou == 3)
         {
-            transform.position = Vector2.MoveTowards(transform.position, nevoksa.transform.position, 0.1f);
+            transform.position = Vector2.MoveTowards(transform.position, nevoksa.transform.position, 0.1f * kare);
             anim.SetBool("darkGarouAttack", true);
 
             if (faceRight == true && nevoksa.transform.position.x - transform.position.x < 0 ||

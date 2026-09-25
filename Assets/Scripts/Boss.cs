@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Boss : MonoBehaviour
 {
+    const float ReferansFps = 60f;
     public int health;
     public Healthbar healthbar;
     public int maxHealth;
@@ -36,12 +37,20 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
-        if (karakter == null)
+        // Oyuncuyu her karede aramak yerine sakla; oyuncu yok edilince veya (Level9'daki gibi)
+        // kontrol edilen karakter degisip eskisi pasif olunca yeniden ara.
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
-            return;
+            GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+            if (karakter == null)
+            {
+                return;
+            }
+            target = karakter.transform;
         }
-        target = karakter.transform;
+        // 60 FPS'e gore ayarli adimlar; deltaTime ile olcekleyince yenileme hizindan
+        // bagimsiz olur ve oyun duraklatildiginda boss da durur.
+        float kare = Time.deltaTime * ReferansFps;
 
         if (transform.localScale.x > 0)
         {
@@ -56,7 +65,7 @@ public class Boss : MonoBehaviour
 
         if (Vector2.Distance(transform.position, target.position) < 30)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, 0.15f);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, 0.15f * kare);
             bossHealthCanvas.SetActive(true);
 
             if (jumpTime < 0)
@@ -72,7 +81,7 @@ public class Boss : MonoBehaviour
             }
             if (speedTime > 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.3f);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.3f * kare);
             }
 
             //if (jumpTime >= randomTime)
@@ -82,7 +91,7 @@ public class Boss : MonoBehaviour
             //}
 
             transform.LookAt(transform.position);
-            transform.position = Vector2.Lerp(transform.position, target.position, 0.001f);
+            transform.position = Vector2.Lerp(transform.position, target.position, 0.001f * kare);
         }
 
         if (faceRight == true && target.position.x - transform.position.x < 0 || faceRight == false && target.position.x - transform.position.x > 0)

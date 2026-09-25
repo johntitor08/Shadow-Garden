@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    public static bool reverse;
+    // Kalkana carpan oyuncu mermileri bu zamana kadar ters yone gider. Eskiden ortak
+    // MermiHareket.cMermiHiz isaret degistiriliyordu; ama her yeni mermi Start'ta onu
+    // 500'e sifirladigi icin geri alma islemi hizi kalici olarak ters birakabiliyordu.
+    static float reverseBitis;
+
+    public static bool reverse => Time.time < reverseBitis;
 
     void Start()
     {
         gameObject.transform.position = transform.parent.position;
-        reverse = false;
+        reverseBitis = 0f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -15,15 +20,7 @@ public class Shield : MonoBehaviour
         if (collision.gameObject.CompareTag("characterBullet"))
         {
             // Destroy(collision.gameObject);
-            MermiHareket.cMermiHiz *= -1;
-            reverse = true;
-            Invoke(nameof(Reverse), 0.5f);
+            reverseBitis = Time.time + 0.5f;
         }
-    }
-
-    public void Reverse()
-    {
-        reverse = false;
-        MermiHareket.cMermiHiz *= -1;
     }
 }

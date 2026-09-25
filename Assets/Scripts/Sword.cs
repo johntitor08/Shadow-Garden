@@ -46,15 +46,29 @@ public class Sword : MonoBehaviour
     public static float erinavsgarou;
     bool attack;
     bool handChange;
+    // Ortak (static) canlar ve erinavsgarou sahne basina bir kez sifirlanir. Eskiden her
+    // Sword ornegi kendi Start'inda sifirliyordu; sonradan aktif edilen bir obje (orn. fireball)
+    // devam eden dovusun canlarini ve asamasini bastan baslatabiliyordu.
+    static int sifirlananSahne = -1;
 
     void Start()
     {
-        ahmettnyHealth = 100;
-        authoryHealth = 100;
-        erinaHealth = 50;
-        garouHealth = 50;
-        darkGarouHealth = 50;
-        nevoksaHealth = 50;
+        if (sifirlananSahne != gameObject.scene.handle)
+        {
+            sifirlananSahne = gameObject.scene.handle;
+            ahmettnyHealth = 100;
+            authoryHealth = 100;
+            erinaHealth = 50;
+            garouHealth = 50;
+            darkGarouHealth = 50;
+            nevoksaHealth = 50;
+
+            if (PlayerPrefs.GetInt("level9Progress") != 2)
+            {
+                erinavsgarou = 0;
+            }
+        }
+
         ahmettnyMaxHealth = 100;
         ahmettnyCurrentHealth = ahmettnyMaxHealth;
         ahmettnyHealthbar.SetMaxHealth(ahmettnyMaxHealth);
@@ -93,11 +107,6 @@ public class Sword : MonoBehaviour
         {
             border1.SetActive(false);
             border2.SetActive(false);
-        }
-
-        if (PlayerPrefs.GetInt("level9Progress") != 2)
-        {
-            erinavsgarou = 0;
         }
 
         attack = false;
@@ -290,7 +299,7 @@ public class Sword : MonoBehaviour
                 else
                 {
                     animator.SetBool("authoryAttackRight", true);
-                    animator.SetBool("authoryStopRight", true);
+                    animator.SetBool("authoryStopRight", false);
                 }
 
                 ahmettnyHealth--;

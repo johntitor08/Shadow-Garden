@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
+    const float ReferansFps = 60f;
     public int health;
     Transform target;
     public bool faceRight;
     public GameObject mermi;
     public Transform atesNoktasi;
-    public static float atisHizi;
+    float atisHizi;
     float atesSayac;
     Animator anim;
     public static bool hareketEt;
@@ -91,12 +92,20 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
-        if (karakter == null)
+        // Oyuncuyu her karede aramak yerine sakla; oyuncu yok edilince veya (Level9'daki gibi)
+        // kontrol edilen karakter degisip eskisi pasif olunca yeniden ara.
+        if (target == null || !target.gameObject.activeInHierarchy)
         {
-            return;
+            GameObject karakter = GameObject.FindGameObjectWithTag("karakter");
+            if (karakter == null)
+            {
+                return;
+            }
+            target = karakter.transform;
         }
-        target = karakter.transform;
+        // Hareket miktarlari 60 FPS icin ayarlanmisti; deltaTime ile olceklemek hizi
+        // ekran yenileme hizindan bagimsiz yapar ve oyun duraklatildiginda (timeScale 0) durdurur.
+        float kare = Time.deltaTime * ReferansFps;
 
         if (transform.localScale.x > 0)
         {
@@ -156,11 +165,11 @@ public class Enemy : MonoBehaviour
                 if (gameObject.CompareTag("enemy") || gameObject.CompareTag("jumperEnemy"))
                 {
                     if (canStep)
-                        transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f);
+                        transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f * kare);
                 }
                 else if (gameObject.CompareTag("heraclus"))
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f);
+                    transform.position = Vector2.MoveTowards(transform.position, chaseTarget, 0.05f * kare);
                 }
 
                 if (gameObject.CompareTag("jumperEnemy"))
@@ -191,7 +200,7 @@ public class Enemy : MonoBehaviour
 
                 transform.LookAt(transform.position);
                 if (canStep)
-                    transform.position = Vector2.Lerp(transform.position, chaseTarget, 0.001f);
+                    transform.position = Vector2.Lerp(transform.position, chaseTarget, 0.001f * kare);
 
             }
             
@@ -218,7 +227,7 @@ public class Enemy : MonoBehaviour
         {
             if (gameObject.CompareTag("bigEnemy"))
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.12f);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.12f * kare);
 
                 if (bigEnemyTime < 0)
                 {
@@ -227,7 +236,7 @@ public class Enemy : MonoBehaviour
 
                 }
 
-                if (gameObject.name == "bigEnemyFirst")
+                if (gameObject.name == "bigEnemyFirst" && bossHealthCanvas != null)
                 {
                     bossHealthCanvas.SetActive(true);
 
@@ -241,9 +250,9 @@ public class Enemy : MonoBehaviour
         {
             if (gameObject.CompareTag("superEnemy"))
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.15f);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, 0.15f * kare);
 
-                if (SceneManager.GetActiveScene().name == "Level5")
+                if (SceneManager.GetActiveScene().name == "Level5" && bossHealthCanvas != null)
                 {
                     bossHealthCanvas.SetActive(true);
 

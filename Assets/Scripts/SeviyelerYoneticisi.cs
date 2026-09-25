@@ -10,10 +10,8 @@ public class SeviyelerYoneticisi : MonoBehaviour
     {
         ScoreGenerator.yildizpuani_int = 0;
         Time.timeScale = 1;
-    }
 
-    private void Update()
-    {
+        // Kilitler sadece bu sahnenin disinda aciliyor; her karede degil bir kez okumak yeterli.
         if (PlayerPrefs.GetInt("seviye2Kilidi") == 1) seviye2_button.interactable = true;
         if (PlayerPrefs.GetInt("seviye3Kilidi") == 1) seviye3_button.interactable = true;
         if (PlayerPrefs.GetInt("seviye4Kilidi") == 1) seviye4_button.interactable = true;
