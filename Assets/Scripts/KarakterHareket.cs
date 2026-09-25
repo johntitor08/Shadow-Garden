@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-public class KarakterHareket : MonoBehaviour
+public partial class KarakterHareket : MonoBehaviour
 {
     public float yatayhareket;
     public int harekethizi;
@@ -126,6 +126,14 @@ public class KarakterHareket : MonoBehaviour
     public GameObject skipButton;
     private AudioSource fart;
     private AudioSource secretMusic;
+    // Aktif sahnenin adi; her karede SceneManager'a sormak yerine bir kez okunur.
+    // Karakter sahneyle birlikte yuklenip yok edildigi icin omru boyunca degismez.
+    private string sahneAdi;
+
+    void Awake()
+    {
+        sahneAdi = SceneManager.GetActiveScene().name;
+    }
 
     void Start()
     {
@@ -154,160 +162,32 @@ public class KarakterHareket : MonoBehaviour
             karakterTurn = true;
         }
 
-        if (SceneManager.GetActiveScene().name != "Level5")
+        if (sahneAdi != "Level5")
         {
             maxCan = 3;
             canSayisi = 3;
         }
 
-        if (SceneManager.GetActiveScene().name == "Level4")
+        if (sahneAdi == "Level4")
         {
             playableDirector = GameObject.Find("Timeline").GetComponent<PlayableDirector>();
         }
-        else if (SceneManager.GetActiveScene().name == "Level6Pre")
+        else if (sahneAdi == "Level6Pre")
         {
             playableDirector = GameObject.Find("nextSceneFiller").GetComponent<PlayableDirector>();
             audioSourceLevel1 = GameObject.Find("MusicAudio").GetComponent<AudioSource>();
         }
-        else if (SceneManager.GetActiveScene().name == "Level6")
+        else if (sahneAdi == "Level6")
         {
-            harekethizi = 14;
-            ziplamahizi = 16;
-            gameObject.transform.position = new Vector3(513.5f, 36, 0);
-            mazeMusic = GameObject.Find("Music").GetComponent<AudioSource>();
-
-            if (cam != null)
-            {
-                mazeDisiArkaPlan = cam.backgroundColor;
-            }
-
-            MazeBolgesiniHesapla();
+            Level6Start();
         }
-        else if (SceneManager.GetActiveScene().name == "Level8")
+        else if (sahneAdi == "Level8")
         {
-            InvokeRepeating(nameof(Shake), 5f, 5f);
-            gameObject.transform.position = new Vector3(-11.5f, -1.1f, 0f);
-            cruelSunTimeline = GameObject.Find("TimelineCruelSun").GetComponent<PlayableDirector>();
-            movingCam = GameObject.FindGameObjectWithTag("moveCamera").GetComponent<CinemachineVirtualCamera>();
-            fart = GameObject.Find("Fart").GetComponent<AudioSource>();
-            secretMusic = GameObject.Find("SecretMusic").GetComponent<AudioSource>();
+            Level8Start();
         }
-        else if (SceneManager.GetActiveScene().name == "Level9")
+        else if (sahneAdi == "Level9")
         {
-            borderRight = GameObject.Find("borderRight");
-            movingCam = GameObject.FindGameObjectWithTag("moveCamera").GetComponent<CinemachineVirtualCamera>();
-
-            if (PlayerPrefs.HasKey("level9Progress"))
-            {
-                PlayerPrefs.GetInt("level9Progress");
-
-                if (PlayerPrefs.GetInt("level9Progress") == 0 && gameObject.name == "nevoksa")
-                {
-                    nevoksa.transform.position = new Vector3(0, 0, 0);
-                    music1.Play();
-                }
-                else if (PlayerPrefs.GetInt("level9Progress") == 1 && gameObject.name == "nevoksa")
-                {
-                    Destroy(GameObject.Find("step1"));
-                    Destroy(GameObject.Find("step2"));
-                    authoryHealthCanvas.SetActive(false);
-                    ahmettnyHealthCanvas.SetActive(false);
-                    transform.position = new Vector3(105, 6.3f, 0);
-                    movingCam.Follow = nevoksa.transform;
-                    movingCam.LookAt = nevoksa.transform;
-                    Destroy(borderRight);
-                    Destroy(authory);
-                    ahmettny.SetActive(false);
-                    earth.SetActive(false);
-                    music1.Play();
-                }
-                else if (PlayerPrefs.GetInt("level9Progress") == 2)
-                {
-                    karakter.SetActive(true);
-                    ahmettnyFake.SetActive(true);
-                    Destroy(GameObject.Find("step1"));
-                    Destroy(GameObject.Find("step2"));
-                    Destroy(GameObject.Find("step3"));
-                    Destroy(GameObject.Find("step4"));
-                    Destroy(GameObject.Find("lastStep"));
-                    authoryHealthCanvas.SetActive(false);
-                    ahmettnyHealthCanvas.SetActive(false);
-                    garouHealthCanvas.SetActive(false);
-                    erinaHealthCanvas.SetActive(false);
-                    Destroy(borderRight);
-                    movingCam.Follow = karakter.transform;
-                    movingCam.LookAt = karakter.transform;
-                    karakter.transform.position = new Vector3(0, 0, 0);
-                    nevoksa.SetActive(false);
-                    Destroy(authory);
-                    erina.SetActive(false);
-                    ahmettny.SetActive(false);
-                    music3.Play();
-                    finishFloor.SetActive(true);
-                    finalFloor.SetActive(false);
-                    level9Part2.SetActive(true);
-                    star.SetActive(true);
-                    Destroy(border1);
-                    Destroy(border2);
-                    starText.SetActive(true);
-                    canlar.SetActive(true);
-                    Sword.erinavsgarou = 6;
-                }
-            }
-            else if (!PlayerPrefs.HasKey("level9Progress"))
-            {
-                if (gameObject.name == "nevoksa")
-                {
-                    nevoksa.transform.position = new Vector3(0, 0, 0);
-                    music1.Play();
-                }
-            }
-
-            if (gameObject.name == "nevoksa")
-            {
-                erina.SetActive(false);
-            }
-
-            if (gameObject.name == "ahmettny")
-            {
-                nevoksa.SetActive(false);
-                erina.SetActive(false);
-            }
-
-            if (gameObject.name == "erina")
-            {
-                nevoksa.SetActive(false);
-                ahmettny.SetActive(false);
-            }
-
-            erinaFake.SetActive(true);
-            garou.SetActive(true);
-
-            if (gameObject.name != "Karakter")
-            {
-                darkGarou.SetActive(false);
-                atesEt = false;
-            }
-            else
-            {
-                atesEt = true;
-                nevoksa.SetActive(false);
-                ahmettny.SetActive(false);
-                erina.SetActive(false);
-            }
-
-            escanor.SetActive(true);
-            background1.SetActive(true);
-            cam.gameObject.SetActive(true);
-            movingCam.gameObject.SetActive(true);
-            playableDirector1 = GameObject.Find("Timeline1").GetComponent<PlayableDirector>();
-            playableDirector2 = GameObject.Find("Timeline2").GetComponent<PlayableDirector>();
-            playableDirector3 = GameObject.Find("Timeline3").GetComponent<PlayableDirector>();
-            playableDirector4a = GameObject.Find("Timeline4a").GetComponent<PlayableDirector>();
-            playableDirector4b = GameObject.Find("Timeline4b").GetComponent<PlayableDirector>();
-            playableDirector5 = GameObject.Find("Timeline5").GetComponent<PlayableDirector>();
-            //fireball.SetActive(false);
-            rightHand = true;
+            Level9Start();
         }
     }
 
@@ -363,9 +243,9 @@ public class KarakterHareket : MonoBehaviour
         timeline -= Time.deltaTime;
         atesSayac -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.F) && atesEt && (SceneManager.GetActiveScene().name == "Level2" || SceneManager.GetActiveScene().name == "Level3" || SceneManager.GetActiveScene().name == "Level4" || SceneManager.GetActiveScene().name == "Level5" || SceneManager.GetActiveScene().name == "Training" || SceneManager.GetActiveScene().name == "Level7" || SceneManager.GetActiveScene().name == "Level9"))
+        if (Input.GetKeyDown(KeyCode.F) && atesEt && (sahneAdi == "Level2" || sahneAdi == "Level3" || sahneAdi == "Level4" || sahneAdi == "Level5" || sahneAdi == "Training" || sahneAdi == "Level7" || sahneAdi == "Level9"))
         {
-            if (atesSayac <= 0f && SceneManager.GetActiveScene().name != "Level3" && SceneManager.GetActiveScene().name != "Level5Pre")
+            if (atesSayac <= 0f && sahneAdi != "Level3" && sahneAdi != "Level5Pre")
             {
                 AtesEt();
                 atesSayac = 0.5f;
@@ -380,15 +260,11 @@ public class KarakterHareket : MonoBehaviour
             ziplamaReset = false;
         }
 
-        if (SceneManager.GetActiveScene().name == "Level6")
+        if (sahneAdi == "Level6")
         {
-            if (cam != null && mazeBolgesiVar)
-            {
-                Vector3 duzlemKonumu = new Vector3(transform.position.x, transform.position.y, mazeBolgesi.center.z);
-                cam.backgroundColor = mazeBolgesi.Contains(duzlemKonumu) ? Color.black : mazeDisiArkaPlan;
-            }
+            Level6Update();
         }
-        else if (SceneManager.GetActiveScene().name == "Level4")
+        else if (sahneAdi == "Level4")
         {
             if (timeline <= 0f)
             {
@@ -401,247 +277,23 @@ public class KarakterHareket : MonoBehaviour
                 atesEt = false;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "Level5Pre")
+        else if (sahneAdi == "Level5Pre")
         {
             harekethizi = 0;
             atesEt = false;
             noSwitch = true;
         }
-        else if (SceneManager.GetActiveScene().name == "Level7")
+        else if (sahneAdi == "Level7")
         {
             harekethizi = 12;
         }
-        else if (SceneManager.GetActiveScene().name == "Level8")
+        else if (sahneAdi == "Level8")
         {
-            harekethizi = 12;
-
-            if (changeSpeed == 0)
-            {
-                ziplamahizi = 10;
-            }
-
-            else if (changeSpeed == 1)
-            {
-                ziplamahizi = 12;
-            }
-
-            else if (changeSpeed == 2)
-            {
-                ziplamahizi = 15;
-            }
-
-            if (cruelSunTimeline.time >= 14.9f)
-            {
-                cinemachine.SetBool("cruelSun", false);
-                GameObject.Find("lavaPass").GetComponent<BoxCollider2D>().isTrigger = true;
-            }
-
+            Level8Update();
         }
-        else if (SceneManager.GetActiveScene().name == "Level9")
+        else if (sahneAdi == "Level9")
         {
-            if (playableDirector1.time >= 4.9f && GameObject.Find("step2"))
-            {
-                background1.SetActive(false);
-                background3.SetActive(true);
-
-                if (PlayerPrefs.GetInt("level9Progress") == 0)
-                {
-                    skipButton.SetActive(true);
-                }
-            }
-
-            if (playableDirector1.time >= 41.9f && GameObject.Find("step2"))
-            {
-                background3.SetActive(false);
-                background2.SetActive(true);
-                skipButton.SetActive(false);
-            }
-
-            if (!GameObject.Find("authory") && GameObject.Find("step3"))
-            {
-                nevoksa.SetActive(true);
-                movingCam.Follow = nevoksa.transform;
-                movingCam.LookAt = nevoksa.transform;
-                background3.SetActive(false);
-                background1.SetActive(true);
-                authoryHealthCanvas.SetActive(false);
-                ahmettnyHealthCanvas.SetActive(false);
-                Destroy(borderRight);
-                PlayerPrefs.SetInt("level9Progress", 1);
-            }
-
-            if (Sword.erinavsgarou == 1 && !GameObject.Find("step4"))
-            {
-                nevoksa.SetActive(true);
-                erina.SetActive(false);
-                escanor.SetActive(true);
-                lavinia.SetActive(true);
-                erinaFake.SetActive(true);
-                garouHealthCanvas.SetActive(false);
-                erinaHealthCanvas.SetActive(false);
-
-                if (gameObject.name == "nevoksa")
-                {
-                    ziplamahizi = 8;
-                    harekethizi = 10;
-                    noSwitch = false;
-                }
-
-                if (Sword.garouHealth <= 0)
-                {
-                    movingCam.Follow = erinaFake.transform;
-                    movingCam.LookAt = erinaFake.transform;
-                    playableDirector4a.Play();
-                }
-
-                else if (Sword.erinaHealth <= 0)
-                {
-                    movingCam.Follow = nevoksa.transform;
-                    movingCam.LookAt = nevoksa.transform;
-                    playableDirector4b.Play();
-                }
-
-                cinemachine.SetBool("level9tl3", true);
-                Sword.erinavsgarou = 2;
-            }
-
-            if (playableDirector2.time >= 4.9f && GameObject.Find("step4") && PlayerPrefs.GetInt("level9Progress") == 1)
-            {
-                skipButton.SetActive(true);
-            }
-
-            if (playableDirector2.time >= 101.4f && GameObject.Find("step4"))
-            {
-                escanor.SetActive(false);
-                erinaFake.SetActive(false);
-                background1.SetActive(false);
-                background2.SetActive(true);
-                skipButton.SetActive(false);
-            }
-
-            if (playableDirector3.time >= 29.9f && Sword.erinavsgarou == 0)
-            {
-                erina.SetActive(true);
-                garou.SetActive(true);
-                nevoksa.SetActive(false);
-                escanor.SetActive(false);
-                lavinia.SetActive(false);
-                erinaFake.SetActive(false);
-                erinaHealthCanvas.SetActive(true);
-                garouHealthCanvas.SetActive(true);
-                movingCam.Follow = erina.transform;
-                movingCam.LookAt = erina.transform;
-                textFight2.SetActive(true);
-                Destroy(textFight2, 3);
-                Destroy(level9Sensor2, 1);
-            }
-
-            if (playableDirector4a.time >= 24.9f)
-            {
-                nevoksa.SetActive(true);
-                movingCam.Follow = nevoksa.transform;
-                movingCam.LookAt = nevoksa.transform;
-                cinemachine.SetBool("level9tl3", false);
-                Sword.erinavsgarou = 4;
-            }
-            else if (playableDirector4b.time >= 11.9f)
-            {
-                nevoksa.SetActive(true);
-                garou.SetActive(false);
-                darkGarou.SetActive(true);
-                escanor.SetActive(false);
-                erina.SetActive(false);
-                erinaFake.SetActive(false);
-                lavinia.SetActive(false);
-                darkGarouHealthCanvas.SetActive(true);
-                nevoksaHealthCanvas.SetActive(true);
-                fireball.SetActive(true);
-                cinemachine.SetBool("level9tl3", false);
-                harekethizi = 10;
-                ziplamahizi = 8;
-                ziplamahakki = 2;
-                noSwitch = false;
-                Sword.erinavsgarou = 3;
-            }
-
-            if (Sword.erinavsgarou == 4)
-            {
-                nevoksa.SetActive(true);
-                erina.SetActive(false);
-                erinaFake.SetActive(false);
-                garou.SetActive(false);
-                escanor.SetActive(false);
-                lavinia.SetActive(false);
-                //fireball.SetActive(false);
-                harekethizi = 10;
-                ziplamahizi = 8;
-                ziplamahakki = 2;
-                noSwitch = false;
-                Sword.erinavsgarou = 5;
-            }
-
-            if (MermiHareket.fire && gameObject.name == "nevoksa")
-            {
-                if (rightHand)
-                {
-                    Vector3 canvas = characterCanvas.transform.position;
-                    Vector3 fire = new(1.5f, -1.9f, 0);
-                    fireball.transform.position = canvas + fire;
-                    MermiHareket.fire = false;
-                }
-                else
-                {
-                    Vector3 canvas = characterCanvas.transform.position;
-                    Vector3 fire = new(-1.5f, -1.9f, 0);
-                    fireball.transform.position = canvas + fire;
-                    MermiHareket.fire = false;
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.G) && gameObject.name == "nevoksa")
-            {
-                rightHand = !rightHand;
-                MermiHareket.cMermiHiz *= -1;
-            }
-
-            if (Input.GetKeyUp(KeyCode.F) && gameObject.name == "nevoksa" && firstTime)
-            {
-                fireball.SetActive(true);
-                firstTime = false;
-            }
-
-            if (playableDirector5.time >= 19.9f && Sword.erinavsgarou == 5)
-            {
-                karakter.SetActive(true);
-                nevoksa.SetActive(false);
-                background1.SetActive(true);
-                finishFloor.SetActive(true);
-                finalFloor.SetActive(false);
-                level9Part2.SetActive(true);
-                star.SetActive(true);
-                starText.SetActive(true);
-                canlar.SetActive(true);
-                escanor.SetActive(true);
-                erinaFake.SetActive(true);
-                ahmettnyFake.SetActive(true);
-                movingCam.LookAt = karakter.transform;
-                movingCam.Follow = karakter.transform;
-                harekethizi = 10;
-                ziplamahizi = 8;
-                ziplamahakki = 2;
-                noSwitch = false;
-                karakterTurn = true;
-                atesEt = true;
-                PlayerPrefs.SetInt("level9Progress", 2);
-                Sword.erinavsgarou = 6;
-            }
-
-            if (GameObject.Find("Karakter"))
-            {
-                nevoksa.SetActive(false);
-                erina.SetActive(false);
-                ahmettny.SetActive(false);
-            }
+            Level9Update();
         }
     }
 
@@ -714,7 +366,7 @@ public class KarakterHareket : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("zemin") && SceneManager.GetActiveScene().name != "Level9")
+        if (collision.gameObject.CompareTag("zemin") && sahneAdi != "Level9")
         {
             pointLight.SetActive(false);
             // Back on normal ground: world lighting returns to normal.
@@ -783,28 +435,7 @@ public class KarakterHareket : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name == "Hit100times1")
-        {
-            hit++;
-
-            if (hit >= 100)
-            {
-                Destroy(collision.gameObject);
-                secretMusic.Play();
-                GameObject.Find("Music").GetComponent<AudioSource>().Stop();
-            }
-        }
-
-        if (collision.gameObject.name == "Hit100times2")
-        {
-            hit++;
-
-            if (hit >= 200)
-            {
-                Destroy(collision.gameObject);
-                fart.Play();
-            }
-        }
+        Level8CollisionEnter(collision);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -862,56 +493,25 @@ public class KarakterHareket : MonoBehaviour
             floorInfo.SetActive(false);
         }
 
-        if (collision.gameObject.name == "sensor1" && SceneManager.GetActiveScene().name == "Training")
+        if (collision.gameObject.name == "sensor1" && sahneAdi == "Training")
         {
             trainingTextShoot.SetActive(false);
         }
 
-        if (collision.gameObject.name == "sensor2" && SceneManager.GetActiveScene().name == "Training")
+        if (collision.gameObject.name == "sensor2" && sahneAdi == "Training")
         {
             trainingTextClimb.SetActive(false);
         }
 
-        if (collision.gameObject.name == "stage1")
-        {
-            stage1.gameObject.SetActive(false);
-        }
+        Level7TriggerExit(collision);
 
-        if (collision.gameObject.name == "stage2")
-        {
-            stage2.gameObject.SetActive(false);
-        }
-
-        if (collision.gameObject.name == "stage3")
-        {
-            stage3.gameObject.SetActive(false);
-            downInfo.gameObject.SetActive(false);
-        }
-
-        if (collision.gameObject.name == "stage4")
-        {
-            stage4.gameObject.SetActive(false);
-        }
-
-        if (collision.gameObject.name == "stage5")
-        {
-            stage5.gameObject.SetActive(false);
-        }
 
         if (collision.gameObject.CompareTag("fallenFloor"))
         {
             collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         }
 
-        if (collision.gameObject.name == "sensorAuthory")
-        {
-            authoryDialogue.SetActive(false);
-        }
-
-        if (collision.gameObject.name == "sensorLavinia")
-        {
-            laviniaDialogue.SetActive(false);
-        }
+        Level8TriggerExit(collision);
     }
 
     public static void Die()
@@ -941,14 +541,14 @@ public class KarakterHareket : MonoBehaviour
             transform.localScale = yeniscale;
             atisHizi *= -1;
 
-            if (SceneManager.GetActiveScene().name == "Level4")
+            if (sahneAdi == "Level4")
             {
                 Vector2 canvas = speechCanvas.transform.localScale;
                 canvas.x *= -1;
                 speechCanvas.transform.localScale = canvas;
             }
 
-            if (SceneManager.GetActiveScene().name == "Level9")
+            if (sahneAdi == "Level9")
             {
                 Vector2 karakterTextScale = characterCanvas.transform.localScale;
                 karakterTextScale.x *= -1;
@@ -1006,7 +606,7 @@ public class KarakterHareket : MonoBehaviour
 
         if (collision.gameObject.name == "friendSensor")
         {
-            if (SceneManager.GetActiveScene().name == "Level4" && timeline <= 0f)
+            if (sahneAdi == "Level4" && timeline <= 0f)
             {
                 timeline = 10f;
                 Destroy(collision.gameObject);
@@ -1046,17 +646,17 @@ public class KarakterHareket : MonoBehaviour
             harekethizi = 0;
         }
 
-        if (collision.gameObject.name == "sensor1" && SceneManager.GetActiveScene().name == "Training")
+        if (collision.gameObject.name == "sensor1" && sahneAdi == "Training")
         {
             trainingTextShoot.SetActive(true);
         }
 
-        if (collision.gameObject.name == "sensor2" && SceneManager.GetActiveScene().name == "Training")
+        if (collision.gameObject.name == "sensor2" && sahneAdi == "Training")
         {
             trainingTextClimb.SetActive(true);
         }
 
-        if (collision.gameObject.name == "nextSceneFiller" && SceneManager.GetActiveScene().name == "Level6Pre")
+        if (collision.gameObject.name == "nextSceneFiller" && sahneAdi == "Level6Pre")
         {
             harekethizi = 0;
         }
@@ -1067,187 +667,18 @@ public class KarakterHareket : MonoBehaviour
             harekethizi = 15;
         }
 
-        if (collision.gameObject.name == "mazeEnter")
+        Level6TriggerEnter(collision);
+
+        Level7TriggerEnter(collision);
+
+
+        if (sahneAdi == "Level8")
         {
-            // Bu alanlar Level6'da inspector'da bagli degil; biri eksik diye
-            // blogun geri kalani (muzik, mazeEnter'in yok edilmesi) atlanmasin.
-            if (cam != null)
-            {
-                cam.backgroundColor = Color.black;
-            }
-
-            mazeMusic.clip = mazeMusicClip;
-            mazeMusic.Play();
-            Destroy(collision.gameObject);
-
-            if (cinemachine != null)
-            {
-                cinemachine.SetBool("enlarge", false);
-                cinemachine.SetBool("shrink", true);
-            }
+            Level8TriggerEnter(collision);
         }
-
-        if (collision.gameObject.name == "stage1")
+        else if (sahneAdi == "Level9")
         {
-            stage1.gameObject.SetActive(true);
-            ScoreGenerator.stageNumber_int = 1;
-            PlayerPrefs.SetInt("stage", 1);
-        }
-
-        if (collision.gameObject.name == "stage2")
-        {
-            stage2.gameObject.SetActive(true);
-            GameObject.Find("stage2StartBorder").GetComponent<BoxCollider2D>().isTrigger = false;
-            ScoreGenerator.stageNumber_int = 2;
-            PlayerPrefs.SetInt("stage", 2);
-        }
-
-        if (collision.gameObject.name == "stage3")
-        {
-            stage3.gameObject.SetActive(true);
-            downInfo.gameObject.SetActive(true);
-            GameObject.Find("stage3StartBorder").GetComponent<BoxCollider2D>().isTrigger = false;
-            ScoreGenerator.stageNumber_int = 3;
-            PlayerPrefs.SetInt("stage", 3);
-        }
-
-        if (collision.gameObject.name == "stage4")
-        {
-            stage4.gameObject.SetActive(true);
-            GameObject.Find("stage4StartBorder").GetComponent<BoxCollider2D>().isTrigger = false;
-            ScoreGenerator.stageNumber_int = 4;
-            PlayerPrefs.SetInt("stage", 4);
-        }
-
-        if (collision.gameObject.name == "stage5")
-        {
-            stage5.gameObject.SetActive(true);
-            GameObject.Find("stage5StartBorder").GetComponent<BoxCollider2D>().isTrigger = false;
-            ScoreGenerator.stageNumber_int = 5;
-            PlayerPrefs.SetInt("stage", 5);
-        }
-
-        if (collision.gameObject.name == "scoreDetector")
-        {
-            canSayisi = 3;
-            ScoreGenerator.scorePoint_int = 0;
-
-            for (int i = 0; i < canSayisi; i++)
-            {
-                can[i].SetActive(true);
-            }
-
-            if (collision.transform.parent.gameObject.name == "stage1")
-            {
-                ScoreGenerator.yildizpuani_int = 0;
-            }
-            else if (collision.transform.parent.gameObject.name == "stage2")
-            {
-                ScoreGenerator.yildizpuani_int = 7;
-            }
-            else if (collision.transform.parent.gameObject.name == "stage3")
-            {
-                ScoreGenerator.yildizpuani_int = 12;
-            }
-            else if (collision.transform.parent.gameObject.name == "stage4")
-            {
-                ScoreGenerator.yildizpuani_int = 20;
-            }
-            else if (collision.transform.parent.gameObject.name == "stage5")
-            {
-                ScoreGenerator.yildizpuani_int = 26;
-            }
-
-            Destroy(collision.gameObject);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Level8")
-        {
-            if (collision.gameObject.name == "lavaSensor")
-            {
-                changeSpeed = 1;
-                cruelSunTimeline.Play();
-                cinemachine.SetBool("cruelSun", true);
-            }
-            else if (collision.gameObject.name == "sensorLava2")
-            {
-                changeSpeed = 0;
-            }
-
-            if (collision.gameObject.name == "sensorAuthory")
-            {
-                authoryDialogue.SetActive(true);
-            }
-
-            if (collision.gameObject.name == "sensorLavinia")
-            {
-                laviniaDialogue.SetActive(true);
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "Level9")
-        {
-            if (collision.gameObject.name == "step1")
-            {
-                playableDirector1.Play();
-                Destroy(collision.gameObject);
-            }
-            else if (collision.gameObject.name == "step2" && PlayerPrefs.GetInt("level9Progress") != 1)
-            {
-                if (gameObject.name == "nevoksa")
-                {
-                    ahmettny.SetActive(true);
-                    gameObject.SetActive(false);
-                }
-
-                ahmettnyFake.SetActive(false);
-                textFight1.SetActive(true);
-                movingCam.Follow = ahmettny.transform;
-                movingCam.LookAt = ahmettny.transform;
-                earth.SetActive(true);
-                background2.SetActive(false);
-                background3.SetActive(true);
-                Destroy(level9Sensor1, 1);
-                Destroy(textFight1, 3);
-                Destroy(collision.gameObject);
-            }
-            else if (collision.gameObject.name == "step3")
-            {
-                erinaFake.SetActive(true);
-                escanor.SetActive(true);
-                playableDirector2.Play();
-                Destroy(collision.gameObject);
-            }
-            else if (collision.gameObject.name == "step4")
-            {
-                escanor.SetActive(true);
-                erinaFake.SetActive(true);
-                erina.SetActive(false);
-                background2.SetActive(false);
-                background4.SetActive(true);
-                cinemachine.SetBool("level9tl3", true);
-                music1.Stop();
-                music2.Play();
-                playableDirector3.Play();
-
-                if (gameObject.name == "nevoksa")
-                {
-                    harekethizi = 0;
-                    noSwitch = true;
-                    ziplamahizi = 0;
-                    gameObject.transform.position = new Vector3(326.5f, 29, 0);
-                }
-
-                Destroy(collision.gameObject);
-            }
-            else if (collision.gameObject.name == "lastStep")
-            {
-                music2.Stop();
-                music3.Play();
-                playableDirector5.Play();
-                gameObject.transform.position = new Vector3(445, 74, 0);
-                background4.SetActive(false);
-                Destroy(collision.gameObject);
-            }
+            Level9TriggerEnter(collision);
         }
     }
 
@@ -1322,39 +753,6 @@ public class KarakterHareket : MonoBehaviour
     }
 
     // Karakterin şu an verilen etikete sahip bir zemine değip değmediğini fizikten sorgular.
-    // Maze bolgesini shadowFloor zeminlerinin kapladigi alandan cikarir; seviye tasarimi
-    // degisirse elle koordinat guncellemek gerekmez.
-    private void MazeBolgesiniHesapla()
-    {
-        GameObject[] golgeZeminler = GameObject.FindGameObjectsWithTag("shadowFloor");
-        mazeBolgesiVar = false;
-
-        for (int i = 0; i < golgeZeminler.Length; i++)
-        {
-            Collider2D golgeCollider = golgeZeminler[i].GetComponent<Collider2D>();
-
-            if (golgeCollider == null)
-            {
-                continue;
-            }
-
-            if (!mazeBolgesiVar)
-            {
-                mazeBolgesi = golgeCollider.bounds;
-                mazeBolgesiVar = true;
-            }
-            else
-            {
-                mazeBolgesi.Encapsulate(golgeCollider.bounds);
-            }
-        }
-
-        if (mazeBolgesiVar)
-        {
-            // Kenarda arka planin titrememesi icin pay birak.
-            mazeBolgesi.Expand(new Vector3(12f, 12f, 1000f));
-        }
-    }
 
     private bool ZeminTemasVar(string etiket)
     {
@@ -1373,19 +771,5 @@ public class KarakterHareket : MonoBehaviour
         return false;
     }
 
-    public void Shake()
-    {
-        cinemachine.SetTrigger("shake");
-    }
-
-    //public void SkipButton()
-    //{
-    //    if (PlayerPrefs.GetInt("level9Progress") == 1)
-    //    {
-    //        playableDirector2.time = 101.4f;
-    //    }
-
-    //    skipButton.SetActive(false);
-    //}
 
 }
