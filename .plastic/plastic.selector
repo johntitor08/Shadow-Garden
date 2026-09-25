@@ -1,4 +1,0 @@
-repository "Cloud Repositories/ShadowGarden@18967699263155@cloud"
-  path "/"
-    br "/main"
-    co "/main"

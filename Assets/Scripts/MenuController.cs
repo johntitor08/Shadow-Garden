@@ -21,6 +21,9 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         settingsMenu.SetActive(false);
+        // Static bayrak sahneler arasinda kaliyor; duraklatma menusunden ana menuye donulunce
+        // true kalirsa yeni sahnede ESC ilk basista Pause yerine Resume calistiriyordu.
+        gameIsPaused = false;
 
         #if UNITY_WEBGL && !UNITY_EDITOR
 
@@ -129,6 +132,8 @@ public class MenuController : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1;
+        gameIsPaused = false;
+        Enemy.hareketEt = true;
         ScoreGenerator.yildizpuani_int = 0;
         SceneManager.LoadScene("Seviyeler");
     }

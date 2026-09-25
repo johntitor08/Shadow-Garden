@@ -35,7 +35,12 @@ public static class HeadlessBuild
                   " sizeBytes=" + s.totalSize + " errors=" + s.totalErrors +
                   " time=" + s.totalTime + " ===");
         if (s.result != BuildResult.Succeeded)
+        {
             Debug.LogError("[HeadlessBuild] FAILED: " + target);
+            // Batchmode'da sifir olmayan cikis kodu, CI'in basarisiz build'i fark etmesini saglar.
+            if (Application.isBatchMode)
+                EditorApplication.Exit(1);
+        }
     }
 
     public static void BuildWindows() { One(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64, "Builds/StandaloneWindows64/ShadowGarden.exe"); }

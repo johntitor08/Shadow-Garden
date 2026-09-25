@@ -290,7 +290,7 @@ public class Sword : MonoBehaviour
                 else
                 {
                     animator.SetBool("authoryAttackRight", true);
-                    animator.SetBool("authoryStopRight", true);
+                    animator.SetBool("authoryStopRight", false);
                 }
 
                 ahmettnyHealth--;

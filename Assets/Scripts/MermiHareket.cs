@@ -20,9 +20,11 @@ public class MermiHareket : MonoBehaviour
 
     void Update()
     {
+        float kalkanYonu = Shield.reverse ? -1f : 1f;
+
         if (gameObject.CompareTag("characterBullet"))
         {
-            rb.linearVelocity = 0.025f * cMermiHiz * new Vector2(vec.x, vec.y);
+            rb.linearVelocity = 0.025f * kalkanYonu * cMermiHiz * new Vector2(vec.x, vec.y);
         }
         else if (gameObject.CompareTag("enemyBullet"))
         {
@@ -30,7 +32,7 @@ public class MermiHareket : MonoBehaviour
         }
         else if (gameObject.name == "fireball" && Input.GetKeyDown(KeyCode.F) && fireTime >= 0.2f)
         {
-            rb.linearVelocity = 0.025f * cMermiHiz * new Vector2(2, vec.y);
+            rb.linearVelocity = 0.025f * kalkanYonu * cMermiHiz * new Vector2(2, vec.y);
             fireTime = 0;
             fire = true;
         }

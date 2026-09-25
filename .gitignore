@@ -13,3 +13,14 @@
 *.suo
 *.cache
 *.log
+
+# IDE / Unity tarafindan uretilen dosyalar
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+
+# Unity Version Control (Plastic) yerel calisma alani durumu
+.plastic/
